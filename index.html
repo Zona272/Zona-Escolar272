@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona Escolar 272</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #263238;
+}
+
+header {
+  background: linear-gradient(135deg, #123b5d, #1976a8);
+  color: white;
+  padding: 45px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+header p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+nav {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: #123b5d;
+  text-decoration: none;
+  margin: 8px 12px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: #1976a8;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.welcome {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 17px;
+  margin: 20px 0 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.card h2 {
+  color: #123b5d;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #607d8b;
+}
+
+.button {
+  display: inline-block;
+  background: #1976a8;
+  color: white;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #123b5d;
+}
+
+section {
+  margin-bottom: 45px;
+}
+
+section h2 {
+  color: #123b5d;
+  border-bottom: 3px solid #1976a8;
+  padding-bottom: 10px;
+}
+
+.submenu {
+  margin-top: 15px;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px;
+  background: #eef5f9;
+  margin: 7px 0;
+  border-radius: 8px;
+  color: #123b5d;
+  text-decoration: none;
+}
+
+footer {
+  background: #123b5d;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 30px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px;
+  }
+
+  .container {
+    padding: 20px 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🏫 ZONA ESCOLAR 272</h1>
+  <p>Portal de materiales, estrategias y evaluaciones</p>
+</header>
+
+<nav>
+  <a href="#material">📚 Material didáctico</a>
+  <a href="#consejo">📝 Consejo Técnico</a>
+  <a href="#experiencias">👩‍🏫 Experiencias</a>
+  <a href="#lectura">📖 Apoyo a la lectura</a>
+  <a href="#evaluaciones">📊 Evaluaciones</a>
+</nav>
+
+<div class="container">
+
+  <div class="welcome">
+    <h2>Bienvenidos al Portal de la Zona Escolar 272</h2>
+    <p>
+      Espacio para compartir materiales, experiencias docentes,
+      estrategias, recursos de apoyo y evaluaciones.
+    </p>
+
+    <input
+      type="text"
+      id="buscador"
+      class="search"
+      placeholder="🔎 Buscar un material..."
+      onkeyup="buscar()">
+  </div>
+
+  <section id="material">
+    <h2>📚 Material didáctico</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h2>Libros de lectura</h2>
+        <p>Material de lectura disponible para las escuelas.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos la carpeta de libros de lectura.')">
+          VER MATERIAL
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🖨️</div>
+        <h2>Material imprimible</h2>
+        <p>Actividades y recursos para trabajar en el aula.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos el material imprimible.')">
+          VER MATERIAL
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="consejo">
+    <h2>📝 Consejo Técnico</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📂</div>
+        <h2>Descargas</h2>
+        <p>Guías, documentos, presentaciones y materiales.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos las descargas del Consejo Técnico.')">
+          DESCARGAS
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experiencias">
+    <h2>👩‍🏫 Experiencias y estrategias</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">👩‍🏫</div>
+        <h2>Experiencias docentes</h2>
+        <p>Compartir experiencias y buenas prácticas docentes.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos las experiencias docentes.')">
+          VER EXPERIENCIAS
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="icon">💡</div>
+        <h2>Estrategias docentes</h2>
+        <p>Estrategias didácticas para apoyar el aprendizaje.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos las estrategias docentes.')">
+          VER ESTRATEGIAS
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="icon">👨‍💼</div>
+        <h2>Estrategias para directores</h2>
+        <p>Recursos y estrategias para la función directiva.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos las estrategias para directores.')">
+          VER MATERIAL
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏫</div>
+        <h2>Zona Escolar</h2>
+        <p>Información y materiales propios de la Zona Escolar 272.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos los materiales de la Zona Escolar.')">
+          VER MATERIAL
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="lectura">
+    <h2>📖 Apoyo a la lectura</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h2>Centro de Maestros</h2>
+        <p>Materiales y recursos para fortalecer la lectura.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos los materiales del Centro de Maestros.')">
+          VER MATERIAL
+        </a>
+      </div>
+
+      <div class="card">
+        <div class="icon">📖</div>
+        <h2>Estrategias de lectura</h2>
+        <p>Actividades para favorecer la lectura y comprensión.</p>
+        <a class="button" href="#" onclick="alert('Aquí colocaremos las estrategias de lectura.')">
+          VER ESTRATEGIAS
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="evaluaciones">
+    <h2>📊 Avance y Evaluaciones</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <div class="icon">📝</div>
+        <h2>Diagnóstico</h2>
+
+        <div class="submenu">
+          <a href="#" onclick="alert('Aquí colocaremos la evaluación de Lectura.')">
+            📖 Lectura
+          </a>
+
+          <a href="#" onclick="alert('Aquí colocaremos la evaluación de Escritura.')">
+            ✍️ Escritura
+          </a>
+
+          <a href="#" onclick="alert('Aquí colocaremos la evaluación de TIC.')">
+            💻 TIC
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">📅</div>
+        <h2>Noviembre</h2>
+
+        <div class="submenu">
+          <a href="#" onclick="alert('Aquí colocaremos la evaluación de Grafías.')">
+            ✏️ Grafías
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🏁</div>
+        <h2>Junio</h2>
+
+        <div class="submenu">
+          <a href="#" onclick="alert('Aquí colocaremos la evaluación de cierre.')">
+            📊 Evaluación de cierre
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <strong>Zona Escolar 272</strong>
+  <br>
+  Portal de recursos educativos
+  <br><br>
+  © 2026
+</footer>
+
+<script>
+function buscar() {
+  let texto = document.getElementById("buscador").value.toLowerCase();
+  let tarjetas = document.querySelectorAll(".card");
+
+  tarjetas.forEach(function(tarjeta) {
+    let contenido = tarjeta.innerText.toLowerCase();
+
+    if (contenido.includes(texto)) {
+      tarjeta.style.display = "";
+    } else {
+      tarjeta.style.display = "none";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
