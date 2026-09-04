@@ -11,6 +11,10 @@
 
 <style>
 
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
 *{
     box-sizing:border-box;
 }
@@ -33,12 +37,11 @@ body{
 
 .top-header{
     height:85px;
-    background:
-        linear-gradient(
-            135deg,
-            #123b5d,
-            #1976a8
-        );
+    background:linear-gradient(
+        135deg,
+        #123b5d,
+        #1976a8
+    );
     color:white;
     display:flex;
     align-items:center;
@@ -48,8 +51,7 @@ body{
     left:0;
     right:0;
     z-index:2000;
-    box-shadow:
-        0 3px 12px rgba(0,0,0,.20);
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
 }
 
 .menu-button{
@@ -83,8 +85,7 @@ body{
     bottom:0;
     width:285px;
     background:#ffffff;
-    box-shadow:
-        3px 0 12px rgba(0,0,0,.12);
+    box-shadow:3px 0 12px rgba(0,0,0,.12);
     overflow-y:auto;
     z-index:1500;
     transition:.3s;
@@ -116,7 +117,7 @@ body{
 
 
 /* =====================================================
-   BOTONES DEL MENÚ
+   MENÚ
 ===================================================== */
 
 .menu-item{
@@ -194,9 +195,17 @@ body{
     min-height:100vh;
 }
 
+.content-section{
+    display:none;
+}
+
+.content-section.active{
+    display:block;
+}
+
 
 /* =====================================================
-   PRESENTACIÓN
+   INICIO
 ===================================================== */
 
 .presentation{
@@ -324,16 +333,8 @@ body{
 
 
 /* =====================================================
-   SECCIONES
+   TÍTULOS
 ===================================================== */
-
-.content-section{
-    display:none;
-}
-
-.content-section.active{
-    display:block;
-}
 
 .content-section h2{
     color:#174f73;
@@ -349,8 +350,10 @@ body{
 
 .grid{
     display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(
+        auto-fit,
+        minmax(280px,1fr)
+    );
     gap:25px;
 }
 
@@ -461,16 +464,34 @@ body{
     font-size:14px;
 }
 
-
-/* =====================================================
-   SUBCATEGORÍAS
-===================================================== */
-
 .sub-buttons{
     display:grid;
     grid-template-columns:1fr;
     gap:10px;
     margin-top:18px;
+}
+
+
+/* =====================================================
+   DESTACADO
+===================================================== */
+
+.featured{
+    background:
+        linear-gradient(
+            135deg,
+            #eef6fa,
+            #ffffff
+        );
+    border-left:5px solid #1976a8;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+}
+
+.featured h3{
+    margin-top:0;
+    color:#174f73;
 }
 
 
@@ -505,33 +526,6 @@ details summary::-webkit-details-marker{
     border-radius:10px;
     display:block;
     box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-
-/* =====================================================
-   BLOQUE DESTACADO
-===================================================== */
-
-.featured{
-    background:
-        linear-gradient(
-            135deg,
-            #eef6fa,
-            #ffffff
-        );
-    border-left:5px solid #1976a8;
-    padding:25px;
-    border-radius:12px;
-    margin-bottom:25px;
-}
-
-.featured h3{
-    margin-top:0;
-    color:#174f73;
-}
-
-.featured p{
-    margin-bottom:0;
 }
 
 
@@ -639,20 +633,6 @@ footer p{
 
 }
 
-
-/* =====================================================
-   VISOR PDF
-===================================================== */
-
-.pdf-viewer{
-    width:100%;
-    height:80vh;
-    border:none;
-    border-radius:12px;
-    background:white;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
 </style>
 
 </head>
@@ -660,6 +640,10 @@ footer p{
 
 <body>
 
+
+<!-- =====================================================
+     ENCABEZADO
+===================================================== -->
 
 <header class="top-header">
 
@@ -681,6 +665,9 @@ footer p{
 </header>
 
 
+<!-- =====================================================
+     MENÚ LATERAL
+===================================================== -->
 
 <aside
     class="sidebar"
@@ -923,13 +910,11 @@ footer p{
 </aside>
 
 
-
 <div
     class="overlay"
     id="overlay"
     onclick="toggleMenu()"
 ></div>
-
 
 
 <main class="main">
@@ -939,7 +924,10 @@ footer p{
      INICIO
 ===================================================== -->
 
-<div id="inicio" class="inicio">
+<div
+    id="inicio"
+    class="inicio"
+>
 
     <div class="presentation">
 
@@ -996,6 +984,7 @@ footer p{
 
         </div>
 
+
         <div class="search-box">
 
             <input
@@ -1012,12 +1001,14 @@ footer p{
 </div>
 
 
-
 <!-- =====================================================
      CONSEJO TÉCNICO
 ===================================================== -->
 
-<section id="consejo" class="content-section">
+<section
+    id="consejo"
+    class="content-section"
+>
 
     <div class="container">
 
@@ -1032,7 +1023,9 @@ footer p{
             📝 Consejo Técnico
         </h2>
 
+
         <div class="grid">
+
 
             <div class="card">
 
@@ -1060,7 +1053,6 @@ footer p{
                     <a
                         class="btn"
                         href="#"
-                        target="_blank"
                     >
                         📖 VER
                     </a>
@@ -1068,7 +1060,6 @@ footer p{
                     <a
                         class="btn btn-download"
                         href="#"
-                        download
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1123,7 +1114,7 @@ footer p{
                         >
 
                         <img
-                            src="CTE%20SEP%204.jpeg"
+                            src="CTE%SEP%204.jpeg"
                             alt="CTE SEP 4"
                         >
 
@@ -1140,12 +1131,14 @@ footer p{
 </section>
 
 
-
 <!-- =====================================================
      EXPERIENCIAS
 ===================================================== -->
 
-<section id="experiencias" class="content-section">
+<section
+    id="experiencias"
+    class="content-section"
+>
 
     <div class="container">
 
@@ -1160,7 +1153,9 @@ footer p{
             👩‍🏫 Experiencias docentes
         </h2>
 
+
         <div class="grid">
+
 
             <div class="card">
 
@@ -1188,7 +1183,6 @@ footer p{
                     <a
                         class="btn"
                         href="#"
-                        target="_blank"
                     >
                         📖 VER
                     </a>
@@ -1196,7 +1190,6 @@ footer p{
                     <a
                         class="btn btn-download"
                         href="#"
-                        download
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1232,7 +1225,6 @@ footer p{
                     <a
                         class="btn"
                         href="#"
-                        target="_blank"
                     >
                         📖 VER
                     </a>
@@ -1240,7 +1232,6 @@ footer p{
                     <a
                         class="btn btn-download"
                         href="#"
-                        download
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1256,12 +1247,14 @@ footer p{
 </section>
 
 
-
 <!-- =====================================================
      LECTURA Y ESCRITURA
 ===================================================== -->
 
-<section id="lectura" class="content-section">
+<section
+    id="lectura"
+    class="content-section"
+>
 
     <div class="container">
 
@@ -1275,6 +1268,7 @@ footer p{
         <h2>
             📖 Apoyo a la lectura y escritura
         </h2>
+
 
         <div class="grid">
 
@@ -1308,7 +1302,6 @@ footer p{
                     <a
                         class="btn"
                         href="#"
-                        target="_blank"
                     >
                         📖 VER
                     </a>
@@ -1316,7 +1309,6 @@ footer p{
                     <a
                         class="btn btn-download"
                         href="#"
-                        download
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1324,7 +1316,6 @@ footer p{
                 </div>
 
             </div>
-
 
 
             <!-- FICHEROS -->
@@ -1350,8 +1341,11 @@ footer p{
                     de segundo a sexto grado.
                 </p>
 
+
                 <div class="sub-buttons">
 
+
+                    <!-- 2° -->
 
                     <div class="documento">
 
@@ -1382,6 +1376,8 @@ footer p{
                     </div>
 
 
+                    <!-- 3° -->
+
                     <div class="documento">
 
                         <strong>
@@ -1410,6 +1406,8 @@ footer p{
 
                     </div>
 
+
+                    <!-- 4° -->
 
                     <div class="documento">
 
@@ -1440,6 +1438,8 @@ footer p{
                     </div>
 
 
+                    <!-- 5° -->
+
                     <div class="documento">
 
                         <strong>
@@ -1468,6 +1468,8 @@ footer p{
 
                     </div>
 
+
+                    <!-- 6° -->
 
                     <div class="documento">
 
@@ -1502,7 +1504,6 @@ footer p{
             </div>
 
 
-
             <!-- ESTRATEGIAS DE ESCRITURA -->
 
             <div class="card">
@@ -1531,7 +1532,6 @@ footer p{
                     <a
                         class="btn"
                         href="#"
-                        target="_blank"
                     >
                         📖 VER
                     </a>
@@ -1539,7 +1539,6 @@ footer p{
                     <a
                         class="btn btn-download"
                         href="#"
-                        download
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1547,7 +1546,6 @@ footer p{
                 </div>
 
             </div>
-
 
 
             <!-- PROGRAMA ANALÍTICO -->
@@ -1596,7 +1594,6 @@ footer p{
             </div>
 
 
-
             <!-- ORGANIZACIÓN DE SESIONES -->
 
             <div class="card">
@@ -1642,6 +1639,7 @@ footer p{
 
             </div>
 
+
         </div>
 
     </div>
@@ -1649,12 +1647,14 @@ footer p{
 </section>
 
 
-
 <!-- =====================================================
      ADMINISTRATIVOS Y NORMATIVOS
 ===================================================== -->
 
-<section id="administrativos" class="content-section">
+<section
+    id="administrativos"
+    class="content-section"
+>
 
     <div class="container">
 
@@ -1668,6 +1668,7 @@ footer p{
         <h2>
             📋 Materiales administrativos y normativos
         </h2>
+
 
         <div class="featured">
 
@@ -1725,7 +1726,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -1733,7 +1733,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -1754,7 +1753,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -1762,7 +1760,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -1775,7 +1772,6 @@ footer p{
                 </div>
 
             </div>
-
 
 
             <!-- =================================================
@@ -1804,51 +1800,39 @@ footer p{
                     de las escuelas.
                 </p>
 
+
                 <div class="sub-buttons">
 
 
-                    <!-- LEY GENERAL DE RESPONSABILIDADES ADMINISTRATIVAS -->
+                    <!-- RESPONSABILIDADES ADMINISTRATIVAS -->
 
                     <div class="documento">
 
                         <strong>
-                            ⚖️ Ley General de Responsabilidades Administrativas
+                            ⚖️ Responsabilidades Administrativas
                         </strong>
 
                         <div class="document-buttons">
 
-                           <div class="documento">
+                            <a
+                                href="Responsabilidades%20Administrativas.pdf"
+                                target="_blank"
+                                class="btn"
+                            >
+                                📖 VER
+                            </a>
 
-    <strong>
-        ⚖️ Responsabilidades Administrativas
-    </strong>
-
-    <div class="document-buttons">
-
-        <a
-            href="Responsabilidades Administrativas.pdf"
-            target="_blank"
-            class="btn"
-        >
-            📖 VER
-        </a>
-
-        <a
-            href="Responsabilidades Administrativas.pdf"
-            download
-            class="btn btn-download"
-        >
-            ⬇️ DESCARGAR
-        </a>
-
-    </div>
-
-</div>
+                            <a
+                                href="Responsabilidades%20Administrativas.pdf"
+                                download
+                                class="btn btn-download"
+                            >
+                                ⬇️ DESCARGAR
+                            </a>
 
                         </div>
 
                     </div>
-
 
 
                     <!-- LINEAMIENTOS -->
@@ -1863,7 +1847,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -1871,7 +1854,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -1881,10 +1863,10 @@ footer p{
 
                     </div>
 
+
                 </div>
 
             </div>
-
 
 
             <!-- GUÍAS OPERATIVAS -->
@@ -1913,17 +1895,17 @@ footer p{
                 <div class="document-buttons">
 
                     <a
-                        class="btn"
                         href="guia-operativa-2025-2026.pdf"
                         target="_blank"
+                        class="btn"
                     >
                         📖 VER
                     </a>
 
                     <a
-                        class="btn btn-download"
                         href="guia-operativa-2025-2026.pdf"
                         download
+                        class="btn btn-download"
                     >
                         ⬇️ DESCARGAR
                     </a>
@@ -1931,7 +1913,6 @@ footer p{
                 </div>
 
             </div>
-
 
 
             <!-- RECOMENDACIÓN AEFCM -->
@@ -1979,6 +1960,7 @@ footer p{
 
             </div>
 
+
         </div>
 
     </div>
@@ -1986,12 +1968,14 @@ footer p{
 </section>
 
 
-
 <!-- =====================================================
      EVALUACIONES
 ===================================================== -->
 
-<section id="evaluaciones" class="content-section">
+<section
+    id="evaluaciones"
+    class="content-section"
+>
 
     <div class="container">
 
@@ -2006,8 +1990,11 @@ footer p{
             📊 Avance y Evaluaciones
         </h2>
 
+
         <div class="grid">
 
+
+            <!-- DIAGNÓSTICO -->
 
             <div class="card">
 
@@ -2030,7 +2017,9 @@ footer p{
                     la evaluación diagnóstica.
                 </p>
 
+
                 <div class="sub-buttons">
+
 
                     <div class="documento">
 
@@ -2042,7 +2031,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -2050,7 +2038,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -2071,7 +2058,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -2079,7 +2065,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -2100,7 +2085,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -2108,7 +2092,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -2122,6 +2105,8 @@ footer p{
 
             </div>
 
+
+            <!-- NOVIEMBRE -->
 
             <div class="card">
 
@@ -2144,6 +2129,7 @@ footer p{
                     y evaluación de noviembre.
                 </p>
 
+
                 <div class="sub-buttons">
 
                     <div class="documento">
@@ -2156,7 +2142,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -2164,7 +2149,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -2178,6 +2162,8 @@ footer p{
 
             </div>
 
+
+            <!-- JUNIO -->
 
             <div class="card">
 
@@ -2200,6 +2186,7 @@ footer p{
                     del ciclo escolar.
                 </p>
 
+
                 <div class="sub-buttons">
 
                     <div class="documento">
@@ -2212,7 +2199,6 @@ footer p{
 
                             <a
                                 href="#"
-                                target="_blank"
                                 class="btn"
                             >
                                 📖 VER
@@ -2220,7 +2206,6 @@ footer p{
 
                             <a
                                 href="#"
-                                download
                                 class="btn btn-download"
                             >
                                 ⬇️ DESCARGAR
@@ -2234,6 +2219,7 @@ footer p{
 
             </div>
 
+
         </div>
 
     </div>
@@ -2241,6 +2227,9 @@ footer p{
 </section>
 
 
+<!-- =====================================================
+     PIE
+===================================================== -->
 
 <footer>
 
@@ -2265,6 +2254,9 @@ footer p{
 </main>
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
 
 <script>
 
@@ -2312,36 +2304,40 @@ function mostrarSeccion(id){
         .getElementById("inicio")
         .style.display="none";
 
+
     const secciones =
         document.querySelectorAll(
             ".content-section"
         );
 
-    secciones.forEach(function(seccion){
 
-        seccion.classList.remove("active");
+    secciones.forEach(
+        function(seccion){
 
-    });
+            seccion.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
 
     const seleccionada =
         document.getElementById(id);
 
+
     if(seleccionada){
 
-        seleccionada.classList.add("active");
+        seleccionada.classList.add(
+            "active"
+        );
 
     }
 
-    window.scrollTo({
 
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-
-    if(window.innerWidth <= 800){
+    if(
+        window.innerWidth <= 800
+    ){
 
         const sidebar =
             document.getElementById("sidebar");
@@ -2354,6 +2350,12 @@ function mostrarSeccion(id){
         overlay.classList.remove("show");
 
     }
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
 
 }
 
@@ -2368,24 +2370,22 @@ function mostrarInicio(){
         .getElementById("inicio")
         .style.display="block";
 
+
     const secciones =
         document.querySelectorAll(
             ".content-section"
         );
 
-    secciones.forEach(function(seccion){
 
-        seccion.classList.remove("active");
+    secciones.forEach(
+        function(seccion){
 
-    });
+            seccion.classList.remove(
+                "active"
+            );
 
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
+        }
+    );
 
 
     if(window.innerWidth <= 800){
@@ -2402,11 +2402,17 @@ function mostrarInicio(){
 
     }
 
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
 }
 
 
 /* =====================================================
-   BUSCADOR
+   BUSCADOR DE INICIO
 ===================================================== */
 
 function buscarInicio(){
@@ -2415,41 +2421,48 @@ function buscarInicio(){
         document
         .getElementById("buscadorInicio")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
+
+
+    if(texto===""){
+        return;
+    }
+
 
     const secciones =
         document.querySelectorAll(
             ".content-section"
         );
 
-    if(texto.trim()===""){
-
-        return;
-
-    }
 
     let encontrada=false;
 
-    secciones.forEach(function(seccion){
 
-        const contenido =
-            seccion.innerText.toLowerCase();
+    secciones.forEach(
+        function(seccion){
 
-        if(
-            contenido.includes(texto)
-            &&
-            !encontrada
-        ){
+            const contenido =
+                seccion.innerText
+                .toLowerCase();
 
-            mostrarSeccion(
-                seccion.id
-            );
 
-            encontrada=true;
+            if(
+                contenido.includes(texto)
+                &&
+                !encontrada
+            ){
+
+                mostrarSeccion(
+                    seccion.id
+                );
+
+                encontrada=true;
+
+            }
 
         }
-
-    });
+    );
 
 }
 
@@ -2463,34 +2476,44 @@ function buscarEnSeccion(input,id){
     let texto =
         input.value.toLowerCase();
 
+
     const seccion =
         document.getElementById(id);
+
 
     const tarjetas =
         seccion.querySelectorAll(
             ".card"
         );
 
-    tarjetas.forEach(function(tarjeta){
 
-        let contenido =
-            tarjeta.innerText.toLowerCase();
+    tarjetas.forEach(
+        function(tarjeta){
 
-        if(
-            contenido.includes(texto)
-        ){
+            let contenido =
+                tarjeta.innerText
+                .toLowerCase();
 
-            tarjeta.style.display="block";
 
-        }else{
+            if(
+                contenido.includes(texto)
+            ){
 
-            tarjeta.style.display="none";
+                tarjeta.style.display=
+                    "block";
+
+            }else{
+
+                tarjeta.style.display=
+                    "none";
+
+            }
 
         }
-
-    });
+    );
 
 }
+
 
 </script>
 
