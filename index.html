@@ -25,15 +25,10 @@ html{
 }
 
 body{
-
     margin:0;
-
     font-family:Arial, Helvetica, sans-serif;
-
     background:#f4f7fb;
-
     color:#263238;
-
 }
 
 
@@ -311,10 +306,6 @@ body{
 }
 
 
-/* =====================================================
-   ELEMENTO ACTIVO DEL SUBMENÚ
-===================================================== */
-
 .submenu a.selected{
 
     background:#dceff7;
@@ -513,6 +504,8 @@ body{
 
     cursor:pointer;
 
+    border:none;
+
 }
 
 
@@ -565,9 +558,6 @@ body{
 
 /* =====================================================
    SECCIONES
-
-   TODAS ESTÁN OCULTAS.
-   SOLO SE MUESTRA LA QUE ESTÉ ACTIVA.
 ===================================================== */
 
 .content-section{
@@ -689,7 +679,7 @@ body{
 
 
 /* =====================================================
-   BOTONES
+   BOTONES GENERALES
 ===================================================== */
 
 .btn{
@@ -732,11 +722,11 @@ body{
 
     display:flex;
 
-    gap:10px;
+    gap:7px;
 
     flex-wrap:wrap;
 
-    margin-top:15px;
+    margin-top:12px;
 
 }
 
@@ -744,6 +734,12 @@ body{
 .document-buttons .btn{
 
     margin-top:0;
+
+    padding:8px 13px;
+
+    font-size:13px;
+
+    border-radius:7px;
 
 }
 
@@ -1020,7 +1016,6 @@ footer p{
 
 @media(max-width:800px){
 
-
     .sidebar{
 
         width:270px;
@@ -1108,19 +1103,16 @@ footer p{
 
     .document-buttons{
 
-        flex-direction:column;
+        flex-direction:row;
 
     }
 
 
     .document-buttons .btn{
 
-        width:100%;
-
-        text-align:center;
+        width:auto;
 
     }
-
 
 }
 
@@ -1137,15 +1129,33 @@ footer p{
 
     }
 
+
     .presentation p{
 
         font-size:15px;
 
     }
 
+
     .fotos{
 
         grid-template-columns:1fr;
+
+    }
+
+
+    .document-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .document-buttons .btn{
+
+        width:100%;
+
+        text-align:center;
 
     }
 
@@ -1164,7 +1174,6 @@ footer p{
 ===================================================== -->
 
 <header class="top-header">
-
 
     <div
         class="menu-button"
@@ -1189,7 +1198,6 @@ footer p{
 
     </div>
 
-
 </header>
 
 
@@ -1207,7 +1215,6 @@ footer p{
     <!-- LOGO -->
 
     <div class="sidebar-logo">
-
 
         <img
             src="LOGO272.jfif"
@@ -1228,17 +1235,13 @@ footer p{
 
         </p>
 
-
     </div>
 
 
 
-    <!-- =================================================
-         INICIO
-    ================================================== -->
+    <!-- INICIO -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1253,17 +1256,13 @@ footer p{
 
         </button>
 
-
     </div>
 
 
 
-    <!-- =================================================
-         MATERIAL DIDÁCTICO
-    ================================================== -->
+    <!-- MATERIAL DIDÁCTICO -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1288,7 +1287,6 @@ footer p{
 
         <div class="submenu">
 
-
             <a
                 onclick="mostrarSeccion('material')"
             >
@@ -1306,20 +1304,15 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         CONSEJO TÉCNICO
-    ================================================== -->
+    <!-- CONSEJO TÉCNICO -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1343,7 +1336,6 @@ footer p{
 
 
         <div class="submenu">
-
 
             <a
                 onclick="mostrarSeccion('consejo')"
@@ -1371,20 +1363,15 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         EXPERIENCIAS
-    ================================================== -->
+    <!-- EXPERIENCIAS -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1409,7 +1396,6 @@ footer p{
 
         <div class="submenu">
 
-
             <a
                 onclick="mostrarSeccion('experiencias')"
             >
@@ -1427,20 +1413,15 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         LECTURA Y ESCRITURA
-    ================================================== -->
+    <!-- LECTURA Y ESCRITURA -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1464,7 +1445,6 @@ footer p{
 
 
         <div class="submenu">
-
 
             <a
                 onclick="mostrarSeccion('lectura')"
@@ -1492,20 +1472,15 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         ADMINISTRATIVOS Y NORMATIVOS
-    ================================================== -->
+    <!-- ADMINISTRATIVOS Y NORMATIVOS -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1529,7 +1504,6 @@ footer p{
 
 
         <div class="submenu">
-
 
             <a
                 onclick="mostrarSeccion('administrativos')"
@@ -1557,20 +1531,15 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
 
 
-    <!-- =================================================
-         EVALUACIONES
-    ================================================== -->
+    <!-- EVALUACIONES -->
 
     <div class="menu-item">
-
 
         <button
             class="menu-title"
@@ -1594,7 +1563,6 @@ footer p{
 
 
         <div class="submenu">
-
 
             <a
                 onclick="mostrarSeccion('evaluaciones')"
@@ -1622,9 +1590,7 @@ footer p{
 
             </a>
 
-
         </div>
-
 
     </div>
 
@@ -1653,7 +1619,7 @@ footer p{
 
 
     <!-- =================================================
-         INICIO / PRESENTACIÓN
+         INICIO
     ================================================== -->
 
     <div
@@ -1664,9 +1630,7 @@ footer p{
 
         <div class="presentation">
 
-
             <div class="presentation-content">
-
 
                 <img
                     src="LOGO272.jfif"
@@ -1698,9 +1662,7 @@ footer p{
 
                 </p>
 
-
             </div>
-
 
         </div>
 
@@ -1708,9 +1670,7 @@ footer p{
 
         <div class="container">
 
-
             <div class="page-introduction">
-
 
                 <h2>
 
@@ -1739,13 +1699,11 @@ footer p{
 
                 </p>
 
-
             </div>
 
 
 
             <div class="search-box">
-
 
                 <input
                     type="text"
@@ -1754,12 +1712,9 @@ footer p{
                     onkeyup="buscarInicio()"
                 >
 
-
             </div>
 
-
         </div>
-
 
     </div>
 
@@ -1774,9 +1729,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -1797,14 +1750,12 @@ footer p{
 
             <div class="search-box">
 
-
                 <input
                     type="text"
                     class="buscador-seccion"
                     placeholder="🔎 Buscar en Material didáctico..."
                     onkeyup="buscarEnSeccion(this,'material')"
                 >
-
 
             </div>
 
@@ -1813,7 +1764,6 @@ footer p{
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -1869,13 +1819,11 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -1931,15 +1879,12 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -1954,9 +1899,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -1979,7 +1922,6 @@ footer p{
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2035,13 +1977,11 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
 
                 <div class="card">
-
 
                     <img
                         src="CTE%20SEP%201.jpeg"
@@ -2074,7 +2014,6 @@ footer p{
 
                     <details>
 
-
                         <summary class="btn">
 
                             VER FOTOGRAFÍAS
@@ -2083,7 +2022,6 @@ footer p{
 
 
                         <div class="fotos">
-
 
                             <img
                                 src="CTE%20SEP%201.jpeg"
@@ -2108,21 +2046,16 @@ footer p{
                                 alt="CTE SEP 4"
                             >
 
-
                         </div>
 
-
                     </details>
-
 
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -2137,9 +2070,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -2162,7 +2093,6 @@ footer p{
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2218,13 +2148,11 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2280,15 +2208,12 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -2303,9 +2228,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -2328,7 +2251,6 @@ footer p{
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2385,13 +2307,11 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2447,13 +2367,11 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2509,22 +2427,19 @@ footer p{
 
                     </div>
 
-
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
 
 
     <!-- =================================================
-         MATERIALES ADMINISTRATIVOS Y NORMATIVOS
+         ADMINISTRATIVOS Y NORMATIVOS
     ================================================== -->
 
     <section
@@ -2532,9 +2447,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -2555,7 +2468,6 @@ footer p{
 
             <div class="featured">
 
-
                 <h3>
 
                     📌 Información para las escuelas
@@ -2573,7 +2485,6 @@ footer p{
 
                 </p>
 
-
             </div>
 
 
@@ -2584,7 +2495,6 @@ footer p{
                 <!-- MATERIAL ADMINISTRATIVO -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2619,8 +2529,9 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <div class="documento">
+                        <!-- PRESENTACIÓN CTE -->
 
+                        <div class="documento">
 
                             <strong>
 
@@ -2631,9 +2542,8 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
-                                    href="PRESENTACIÓN CTE 272- Recomendacion AEFCM.pptx"
+                                    href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendacion%20AEFCM.pptx"
                                     target="_blank"
                                     class="btn"
                                 >
@@ -2644,7 +2554,7 @@ footer p{
 
 
                                 <a
-                                    href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendaci%C3%B3n%20AEFCM.pptx"
+                                    href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendacion%20AEFCM.pptx"
                                     download
                                     class="btn btn-download"
                                 >
@@ -2653,16 +2563,15 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
 
-                        <div class="documento">
+                        <!-- FORMATOS -->
 
+                        <div class="documento">
 
                             <strong>
 
@@ -2673,7 +2582,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -2695,16 +2603,15 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
 
-                        <div class="documento">
+                        <!-- DOCUMENTOS -->
 
+                        <div class="documento">
 
                             <strong>
 
@@ -2715,7 +2622,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -2737,15 +2643,12 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
                     </div>
-
 
                 </div>
 
@@ -2754,7 +2657,6 @@ footer p{
                 <!-- MATERIAL NORMATIVO -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2789,8 +2691,9 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <div class="documento">
+                        <!-- NORMATIVIDAD -->
 
+                        <div class="documento">
 
                             <strong>
 
@@ -2801,7 +2704,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -2823,16 +2725,15 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
 
-                        <div class="documento">
+                        <!-- LINEAMIENTOS -->
 
+                        <div class="documento">
 
                             <strong>
 
@@ -2843,7 +2744,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -2865,15 +2765,12 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
                     </div>
-
 
                 </div>
 
@@ -2882,7 +2779,6 @@ footer p{
                 <!-- GUÍAS OPERATIVAS -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -2915,7 +2811,6 @@ footer p{
 
                     <div class="document-buttons">
 
-
                         <a
                             class="btn"
                             href="guia-operativa-2025-2026.pdf"
@@ -2937,18 +2832,14 @@ footer p{
 
                         </a>
 
-
                     </div>
-
 
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -2963,9 +2854,7 @@ footer p{
         class="content-section"
     >
 
-
         <div class="container">
-
 
             <button
                 class="back-home"
@@ -2990,7 +2879,6 @@ footer p{
                 <!-- DIAGNÓSTICO -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -3026,7 +2914,6 @@ footer p{
 
                         <div class="documento">
 
-
                             <strong>
 
                                 📖 Lectura
@@ -3035,7 +2922,6 @@ footer p{
 
 
                             <div class="document-buttons">
-
 
                                 <a
                                     href="#"
@@ -3058,16 +2944,13 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
 
                         <div class="documento">
-
 
                             <strong>
 
@@ -3078,7 +2961,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -3100,16 +2982,13 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
 
                         <div class="documento">
-
 
                             <strong>
 
@@ -3120,7 +2999,6 @@ footer p{
 
                             <div class="document-buttons">
 
-
                                 <a
                                     href="#"
                                     target="_blank"
@@ -3142,15 +3020,12 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
 
                     </div>
-
 
                 </div>
 
@@ -3159,7 +3034,6 @@ footer p{
                 <!-- NOVIEMBRE -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -3192,9 +3066,7 @@ footer p{
 
                     <div class="sub-buttons">
 
-
                         <div class="documento">
-
 
                             <strong>
 
@@ -3204,7 +3076,6 @@ footer p{
 
 
                             <div class="document-buttons">
-
 
                                 <a
                                     href="#"
@@ -3227,15 +3098,11 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
-
                     </div>
-
 
                 </div>
 
@@ -3244,7 +3111,6 @@ footer p{
                 <!-- JUNIO -->
 
                 <div class="card">
-
 
                     <img
                         src="LOGO272.jfif"
@@ -3277,9 +3143,7 @@ footer p{
 
                     <div class="sub-buttons">
 
-
                         <div class="documento">
-
 
                             <strong>
 
@@ -3289,7 +3153,6 @@ footer p{
 
 
                             <div class="document-buttons">
-
 
                                 <a
                                     href="#"
@@ -3312,24 +3175,18 @@ footer p{
 
                                 </a>
 
-
                             </div>
-
 
                         </div>
 
-
                     </div>
-
 
                 </div>
 
 
             </div>
 
-
         </div>
-
 
     </section>
 
@@ -3337,38 +3194,36 @@ footer p{
 
     <!-- =================================================
          PIE DE PÁGINA
-    ================================================== -->
+===================================================== -->
 
-    <footer>
+<footer>
 
+    <p>
 
-        <p>
+        <strong>
 
-            <strong>
+            Zona Escolar 272
 
-                Zona Escolar 272
+        </strong>
 
-            </strong>
-
-        </p>
-
-
-        <p>
-
-            Portal de materiales, estrategias,
-            experiencias y recursos educativos
-
-        </p>
+    </p>
 
 
-        <p>
+    <p>
 
-            Ciclo Escolar 2026–2027
+        Portal de materiales, estrategias,
+        experiencias y recursos educativos
 
-        </p>
+    </p>
 
 
-    </footer>
+    <p>
+
+        Ciclo Escolar 2026–2027
+
+    </p>
+
+</footer>
 
 
 </main>
@@ -3383,7 +3238,7 @@ footer p{
 
 
 /* =====================================================
-   ABRIR / CERRAR MENÚ EN CELULAR
+   ABRIR / CERRAR MENÚ
 ===================================================== */
 
 function toggleMenu(){
@@ -3425,14 +3280,10 @@ function toggleSubmenu(button){
 
 function mostrarSeccion(id){
 
-    /* Ocultar inicio */
-
     document
         .getElementById("inicio")
         .style.display="none";
 
-
-    /* Ocultar todas las secciones */
 
     const secciones =
         document.querySelectorAll(
@@ -3447,8 +3298,6 @@ function mostrarSeccion(id){
     });
 
 
-    /* Mostrar sección seleccionada */
-
     const seleccionada =
         document.getElementById(id);
 
@@ -3460,8 +3309,6 @@ function mostrarSeccion(id){
     }
 
 
-    /* Ir arriba */
-
     window.scrollTo({
 
         top:0,
@@ -3470,8 +3317,6 @@ function mostrarSeccion(id){
 
     });
 
-
-    /* Cerrar menú en celular */
 
     if(window.innerWidth <= 800){
 
@@ -3498,14 +3343,10 @@ function mostrarSeccion(id){
 
 function mostrarInicio(){
 
-    /* Mostrar inicio */
-
     document
         .getElementById("inicio")
         .style.display="block";
 
-
-    /* Ocultar secciones */
 
     const secciones =
         document.querySelectorAll(
@@ -3520,8 +3361,6 @@ function mostrarInicio(){
     });
 
 
-    /* Ir arriba */
-
     window.scrollTo({
 
         top:0,
@@ -3530,8 +3369,6 @@ function mostrarInicio(){
 
     });
 
-
-    /* Cerrar menú */
 
     if(window.innerWidth <= 800){
 
