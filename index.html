@@ -8,6 +8,10 @@
 
 <style>
 
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
 *{
     box-sizing:border-box;
 }
@@ -23,123 +27,304 @@ body{
     color:#263238;
 }
 
-/* ENCABEZADO */
 
-header{
+/* ================================
+   ENCABEZADO SUPERIOR
+================================ */
+
+.top-header{
+    height:85px;
     background:linear-gradient(135deg,#123b5d,#1976a8);
     color:white;
-    padding:45px 20px;
-    text-align:center;
-}
-
-header::after{
-    content:"🇲🇽";
-    position:absolute;
-    bottom:8px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:24px;
-    opacity:.85;
-}
-    header::after{
-    content:"🇲🇽";
-    position:absolute;
-    bottom:8px;
-    left:50%;
-    transform:translateX(-50%);
-    font-size:24px;
-    opacity:.85;
-}
-
-.logo-zona{
-    width:180px;
-    height:180px;
-    object-fit:contain;
-    display:block;
-    margin:0 auto 15px;
-}
-
-/* MENU */
-
-nav{
-    background:white;
-    padding:15px;
-    text-align:center;
-    position:sticky;
+    display:flex;
+    align-items:center;
+    padding:0 25px;
+    position:fixed;
     top:0;
-    z-index:1000;
-    box-shadow:0 2px 8px rgba(0,0,0,.10);
+    left:0;
+    right:0;
+    z-index:2000;
+    box-shadow:0 3px 12px rgba(0,0,0,.20);
 }
 
-nav a{
-    color:#263238;
-    text-decoration:none;
+.menu-button{
+    font-size:28px;
+    cursor:pointer;
+    margin-right:20px;
+    width:45px;
+    text-align:center;
+}
+
+.top-title{
+    font-size:22px;
     font-weight:bold;
-    margin:0 12px;
-    display:inline-block;
-    padding:6px;
 }
 
-nav a:hover{
+.top-subtitle{
+    font-size:13px;
+    opacity:.9;
+    margin-left:15px;
+}
+
+
+/* ================================
+   MENÚ LATERAL
+================================ */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:85px;
+    bottom:0;
+    width:285px;
+    background:#ffffff;
+    box-shadow:3px 0 12px rgba(0,0,0,.12);
+    overflow-y:auto;
+    z-index:1500;
+    transition:.3s;
+}
+
+.sidebar-logo{
+    text-align:center;
+    padding:25px 15px 15px;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.sidebar-logo img{
+    width:105px;
+    height:105px;
+    object-fit:contain;
+}
+
+.sidebar-logo h2{
+    color:#174f73;
+    font-size:17px;
+    margin:10px 0 3px;
+}
+
+.sidebar-logo p{
+    color:#78909c;
+    font-size:12px;
+    margin:0;
+}
+
+
+/* BOTONES DEL MENÚ */
+
+.menu-item{
+    border-bottom:1px solid #eeeeee;
+}
+
+.menu-title{
+    width:100%;
+    border:0;
+    background:white;
+    color:#263238;
+    padding:17px 20px;
+    text-align:left;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    transition:.2s;
+}
+
+.menu-title:hover{
+    background:#eef6fa;
     color:#1976a8;
 }
 
-/* CONTENEDOR */
+.menu-title .arrow{
+    transition:.3s;
+}
+
+.menu-item.active .arrow{
+    transform:rotate(90deg);
+}
+
+
+/* SUBMENÚ */
+
+.submenu{
+    display:none;
+    background:#f4f8fa;
+    padding:5px 0;
+}
+
+.menu-item.active .submenu{
+    display:block;
+}
+
+.submenu a{
+    display:block;
+    padding:13px 20px 13px 48px;
+    color:#455a64;
+    text-decoration:none;
+    font-size:14px;
+    border-left:4px solid transparent;
+}
+
+.submenu a:hover{
+    background:#e1f0f6;
+    color:#1976a8;
+    border-left:4px solid #1976a8;
+}
+
+
+/* ================================
+   CONTENIDO PRINCIPAL
+================================ */
+
+.main{
+    margin-left:285px;
+    padding-top:85px;
+    min-height:100vh;
+}
+
+
+/* ================================
+   PRESENTACIÓN
+================================ */
+
+.presentation{
+    min-height:430px;
+    background:
+        linear-gradient(
+            rgba(18,59,93,.90),
+            rgba(25,118,168,.88)
+        ),
+        url("LOGO272.jfif");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    color:white;
+    padding:50px 30px;
+}
+
+.presentation-content{
+    max-width:800px;
+}
+
+.presentation-logo{
+    width:155px;
+    height:155px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.presentation h1{
+    font-size:42px;
+    margin:10px 0;
+}
+
+.presentation h2{
+    font-size:23px;
+    font-weight:normal;
+    margin:10px 0 20px;
+}
+
+.presentation p{
+    font-size:17px;
+    line-height:1.7;
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
 
 .container{
     max-width:1200px;
     margin:auto;
-    padding:35px 20px;
+    padding:40px 30px;
 }
 
-/* PRESENTACION */
+
+/* ================================
+   BIENVENIDA
+================================ */
 
 .welcome{
-    text-align:center;
+    background:white;
+    border-radius:15px;
+    padding:30px;
     margin-bottom:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    text-align:center;
 }
 
 .welcome h2{
-    color:#263238;
+    color:#174f73;
 }
 
-/* BUSCADOR */
+.welcome p{
+    line-height:1.6;
+    color:#607d8b;
+}
+
+
+/* ================================
+   BUSCADOR
+================================ */
 
 .search-box{
-    margin:25px 0 45px;
+    margin:25px 0 40px;
 }
 
 .search-box input{
     width:100%;
-    padding:16px;
-    border:1px solid #ccc;
-    border-radius:10px;
+    padding:17px 20px;
+    border:1px solid #ccd6dc;
+    border-radius:12px;
     font-size:16px;
+    outline:none;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
-/* SECCIONES */
+.search-box input:focus{
+    border-color:#1976a8;
+}
+
+
+/* ================================
+   SECCIONES
+================================ */
 
 section{
-    margin-bottom:50px;
+    margin-bottom:60px;
+    scroll-margin-top:105px;
 }
 
 section h2{
     color:#174f73;
     border-bottom:3px solid #1976a8;
     padding-bottom:10px;
+    margin-bottom:25px;
 }
 
-/* TARJETAS */
+
+/* ================================
+   TARJETAS
+================================ */
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 }
 
 .card{
     background:white;
-    border-radius:14px;
+    border-radius:15px;
     padding:25px;
     box-shadow:0 4px 15px rgba(0,0,0,.10);
     transition:.2s;
@@ -161,10 +346,13 @@ section h2{
 
 .card p{
     color:#607d8b;
-    line-height:1.5;
+    line-height:1.6;
 }
 
-/* BOTONES */
+
+/* ================================
+   BOTONES
+================================ */
 
 .btn{
     display:inline-block;
@@ -175,13 +363,60 @@ section h2{
     border-radius:8px;
     font-weight:bold;
     margin-top:10px;
+    border:none;
+    cursor:pointer;
 }
 
 .btn:hover{
     background:#0d719e;
 }
 
-/* GALERIA DE FOTOGRAFIAS */
+
+/* ================================
+   SUBCATEGORÍAS
+================================ */
+
+.sub-buttons{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(180px,1fr));
+    gap:12px;
+    margin-top:20px;
+}
+
+.sub-buttons a{
+    display:block;
+    background:#eef6fa;
+    color:#174f73;
+    padding:17px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid #d5e7ef;
+}
+
+.sub-buttons a:hover{
+    background:#dceff7;
+}
+
+
+/* ================================
+   FOTOGRAFÍAS
+================================ */
+
+details{
+    margin-top:15px;
+}
+
+details summary{
+    cursor:pointer;
+    list-style:none;
+    display:inline-block;
+}
+
+details summary::-webkit-details-marker{
+    display:none;
+}
 
 .fotos{
     margin-top:20px;
@@ -198,72 +433,65 @@ section h2{
     box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-details{
-    margin-top:5px;
-}
 
-details summary{
-    cursor:pointer;
-    list-style:none;
-}
-
-details summary::-webkit-details-marker{
-    display:none;
-}
-
-/* SUBCATEGORIAS */
-
-.submenu{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-    margin-top:20px;
-}
-
-.submenu a{
-    display:block;
-    background:#eef6fa;
-    color:#174f73;
-    padding:18px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    border:1px solid #d5e7ef;
-}
-
-.submenu a:hover{
-    background:#dceff7;
-}
-
-/* PIE */
+/* ================================
+   PIE DE PÁGINA
+================================ */
 
 footer{
     background:#123b5d;
     color:white;
     text-align:center;
-    padding:30px 20px;
-    margin-top:50px;
+    padding:35px 20px;
 }
 
 footer p{
-    margin:5px;
+    margin:7px;
 }
 
-/* MOVIL */
 
-@media(max-width:700px){
+/* ================================
+   RESPONSIVO
+================================ */
 
-    header h1{
+@media(max-width:800px){
+
+    .sidebar{
+        width:270px;
+        transform:translateX(-100%);
+    }
+
+    .sidebar.open{
+        transform:translateX(0);
+    }
+
+    .main{
+        margin-left:0;
+    }
+
+    .top-title{
+        font-size:17px;
+    }
+
+    .top-subtitle{
+        display:none;
+    }
+
+    .presentation{
+        min-height:400px;
+    }
+
+    .presentation h1{
         font-size:30px;
     }
 
-    header p{
-        font-size:15px;
+    .presentation h2{
+        font-size:19px;
     }
 
-    nav a{
-        margin:4px;
-        font-size:14px;
+    .presentation-logo{
+        width:125px;
+        height:125px;
     }
 
     .container{
@@ -271,53 +499,309 @@ footer p{
     }
 
     .fotos{
-        grid-template-columns:repeat(2,1fr);
-        gap:8px;
+        grid-template-columns:1fr 1fr;
     }
+}
 
+
+/* FONDO OSCURO AL ABRIR MENÚ EN CELULAR */
+
+.overlay{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    z-index:1400;
+}
+
+.overlay.show{
+    display:block;
 }
 
 </style>
 </head>
 
+
 <body>
 
-<!-- ENCABEZADO -->
 
-<header>
+<!-- =================================
+     ENCABEZADO
+================================= -->
 
-    <img src="LOGO272.jfif" alt="Logo Zona Escolar 272" class="logo-zona">
+<header class="top-header">
 
-    <h1>🏫 ZONA ESCOLAR 272</h1>
+    <div
+        class="menu-button"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </div>
 
-    <p>
-        Portal de materiales, estrategias y evaluaciones
-    </p>
+    <div class="top-title">
+        ZONA ESCOLAR 272
+    </div>
+
+    <div class="top-subtitle">
+        Portal de materiales y recursos educativos
+    </div>
 
 </header>
 
 
-<!-- MENU -->
+<!-- =================================
+     MENÚ LATERAL
+================================= -->
 
-<nav>
+<aside class="sidebar" id="sidebar">
 
-    <a href="#material">📚 Material didáctico</a>
+    <div class="sidebar-logo">
 
-    <a href="#consejo">📝 Consejo Técnico</a>
+        <img
+            src="LOGO272.jfif"
+            alt="Logo Zona Escolar 272"
+        >
 
-    <a href="#experiencias">👩‍🏫 Experiencias</a>
+        <h2>Zona Escolar No. 272</h2>
 
-    <a href="#lectura">📖 Apoyo a la lectura</a>
+        <p>Ciclo Escolar 2026–2027</p>
 
-    <a href="#evaluaciones">📊 Evaluaciones</a>
+    </div>
 
-</nav>
+
+    <!-- INICIO -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="irA('inicio')"
+        >
+            <span>🏠 Inicio</span>
+        </button>
+
+    </div>
+
+
+    <!-- MATERIAL -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="toggleSubmenu(this)"
+        >
+
+            <span>📚 Material didáctico</span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+        <div class="submenu">
+
+            <a href="#material">
+                📖 Libros de lectura
+            </a>
+
+            <a href="#material">
+                🖨️ Material imprimible
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONSEJO TÉCNICO -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="toggleSubmenu(this)"
+        >
+
+            <span>📝 Consejo Técnico</span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+        <div class="submenu">
+
+            <a href="#consejo">
+                📋 Descargas
+            </a>
+
+            <a href="#consejo">
+                📅 Sesiones CTE
+            </a>
+
+            <a href="#consejo">
+                📷 Fotografías
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EXPERIENCIAS -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="toggleSubmenu(this)"
+        >
+
+            <span>👩‍🏫 Experiencias</span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+        <div class="submenu">
+
+            <a href="#experiencias">
+                👩‍🏫 Estrategias docentes
+            </a>
+
+            <a href="#experiencias">
+                👨‍💼 Estrategias para directores
+            </a>
+
+            <a href="#experiencias">
+                🏫 Zona Escolar
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- LECTURA -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="toggleSubmenu(this)"
+        >
+
+            <span>📖 Apoyo a la lectura</span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+        <div class="submenu">
+
+            <a href="#lectura">
+                📚 Centro de Maestros
+            </a>
+
+            <a href="#lectura">
+                📖 Estrategias de lectura
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EVALUACIONES -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="toggleSubmenu(this)"
+        >
+
+            <span>📊 Evaluaciones</span>
+
+            <span class="arrow">›</span>
+
+        </button>
+
+        <div class="submenu">
+
+            <a href="#evaluaciones">
+                🔎 Diagnóstico
+            </a>
+
+            <a href="#evaluaciones">
+                📝 Noviembre
+            </a>
+
+            <a href="#evaluaciones">
+                📅 Junio
+            </a>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- FONDO PARA CELULAR -->
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="toggleMenu()"
+></div>
+
+
+<!-- =================================
+     CONTENIDO
+================================= -->
+
+<main class="main" id="inicio">
+
+
+<!-- =================================
+     PRESENTACIÓN
+================================= -->
+
+<div class="presentation">
+
+    <div class="presentation-content">
+
+        <img
+            src="LOGO272.jfif"
+            alt="Logo Zona Escolar 272"
+            class="presentation-logo"
+        >
+
+        <h1>
+            ZONA ESCOLAR 272
+        </h1>
+
+        <h2>
+            Bienvenidos a nuestro espacio educativo
+        </h2>
+
+        <p>
+            Portal de materiales, estrategias, experiencias,
+            evaluaciones y recursos de apoyo para las escuelas
+            que integran nuestra Zona Escolar.
+        </p>
+
+    </div>
+
+</div>
 
 
 <div class="container">
 
 
-<!-- BIENVENIDA -->
+<!-- =================================
+     BIENVENIDA
+================================= -->
 
 <div class="welcome">
 
@@ -326,14 +810,18 @@ footer p{
     </h2>
 
     <p>
-        Espacio para compartir materiales, experiencias docentes,
-        estrategias, recursos de apoyo y evaluaciones.
+        Este espacio tiene como propósito compartir materiales,
+        experiencias docentes, estrategias educativas,
+        recursos de apoyo y evaluaciones para fortalecer
+        el trabajo de nuestras escuelas.
     </p>
 
 </div>
 
 
-<!-- BUSCADOR -->
+<!-- =================================
+     BUSCADOR
+================================= -->
 
 <div class="search-box">
 
@@ -347,7 +835,9 @@ footer p{
 </div>
 
 
-<!-- MATERIAL DIDACTICO -->
+<!-- =================================
+     MATERIAL DIDÁCTICO
+================================= -->
 
 <section id="material">
 
@@ -365,8 +855,6 @@ footer p{
             <p>
                 Material de lectura disponible para las escuelas.
             </p>
-
-            <!-- AQUÍ COLOCAREMOS EL ENLACE DE GOOGLE DRIVE -->
 
             <a
                 class="btn"
@@ -405,7 +893,9 @@ footer p{
 </section>
 
 
-<!-- CONSEJO TECNICO -->
+<!-- =================================
+     CONSEJO TÉCNICO
+================================= -->
 
 <section id="consejo">
 
@@ -421,8 +911,8 @@ footer p{
             <h3>Descargas</h3>
 
             <p>
-                Materiales, documentos y recursos para las sesiones
-                del Consejo Técnico Escolar.
+                Materiales, documentos y recursos para las
+                sesiones del Consejo Técnico Escolar.
             </p>
 
             <a
@@ -436,93 +926,21 @@ footer p{
         </div>
 
 
-    </div>
-
-</section>
-
-
-<!-- EXPERIENCIAS -->
-
-<section id="experiencias">
-
-    <h2>👩‍🏫 Experiencias docentes</h2>
-
-    <div class="grid">
-
-
         <div class="card">
 
-            <div class="icon">👩‍🏫</div>
+            <div class="icon">📷</div>
 
-            <h3>Estrategias docentes</h3>
-
-            <p>
-                Experiencias y estrategias compartidas por docentes
-                de la Zona Escolar.
-            </p>
-
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER ESTRATEGIAS
-            </a>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">👨‍💼</div>
-
-            <h3>Estrategias para directores</h3>
+            <h3>Fotografías CTE SEP</h3>
 
             <p>
-                Recursos, experiencias y estrategias para la función
-                directiva.
+                Galería de fotografías de las actividades
+                del Consejo Técnico Escolar.
             </p>
-
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER RECURSOS
-            </a>
-
-        </div>
-
-
-        <!-- ZONA ESCOLAR -->
-
-        <div class="card">
-
-            <div class="icon">🏫</div>
-
-            <h3>Zona Escolar</h3>
-
-            <p>
-                Información, documentos y recursos de apoyo para
-                las escuelas de la Zona Escolar 272.
-            </p>
-
-            <!-- GUIA OPERATIVA -->
-
-            <a
-                class="btn"
-                href="guia-operativa-2025-2026.pdf"
-                target="_blank"
-            >
-                MATERIAL GUIA OPERATIVA 2025-2026
-            </a>
-
-            <!-- FOTOGRAFIAS -->
 
             <details>
 
                 <summary class="btn">
-                    📷 VER FOTOGRAFÍAS CTE SEP
+                    VER FOTOGRAFÍAS
                 </summary>
 
                 <div class="fotos">
@@ -559,7 +977,91 @@ footer p{
 </section>
 
 
-<!-- APOYO A LA LECTURA -->
+<!-- =================================
+     EXPERIENCIAS
+================================= -->
+
+<section id="experiencias">
+
+    <h2>👩‍🏫 Experiencias docentes</h2>
+
+    <div class="grid">
+
+
+        <div class="card">
+
+            <div class="icon">👩‍🏫</div>
+
+            <h3>Estrategias docentes</h3>
+
+            <p>
+                Experiencias y estrategias compartidas
+                por docentes de la Zona Escolar.
+            </p>
+
+            <a
+                class="btn"
+                href="#"
+                target="_blank"
+            >
+                VER ESTRATEGIAS
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">👨‍💼</div>
+
+            <h3>Estrategias para directores</h3>
+
+            <p>
+                Recursos, experiencias y estrategias
+                para la función directiva.
+            </p>
+
+            <a
+                class="btn"
+                href="#"
+                target="_blank"
+            >
+                VER RECURSOS
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🏫</div>
+
+            <h3>Zona Escolar</h3>
+
+            <p>
+                Información, documentos y recursos de apoyo
+                para las escuelas de la Zona Escolar 272.
+            </p>
+
+            <a
+                class="btn"
+                href="guia-operativa-2025-2026.pdf"
+                target="_blank"
+            >
+                GUÍA OPERATIVA 2025-2026
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     APOYO A LA LECTURA
+================================= -->
 
 <section id="lectura">
 
@@ -575,8 +1077,8 @@ footer p{
             <h3>Centro de Maestros</h3>
 
             <p>
-                Recursos y materiales de apoyo para fortalecer
-                la lectura.
+                Recursos y materiales de apoyo
+                para fortalecer la lectura.
             </p>
 
             <a
@@ -597,8 +1099,8 @@ footer p{
             <h3>Estrategias de lectura</h3>
 
             <p>
-                Actividades y estrategias para fomentar la lectura
-                en los alumnos.
+                Actividades y estrategias para fomentar
+                la lectura en los alumnos.
             </p>
 
             <a
@@ -617,7 +1119,9 @@ footer p{
 </section>
 
 
-<!-- EVALUACIONES -->
+<!-- =================================
+     EVALUACIONES
+================================= -->
 
 <section id="evaluaciones">
 
@@ -626,8 +1130,6 @@ footer p{
     <div class="grid">
 
 
-        <!-- DIAGNOSTICO -->
-
         <div class="card">
 
             <div class="icon">🔎</div>
@@ -635,11 +1137,11 @@ footer p{
             <h3>Diagnóstico</h3>
 
             <p>
-                Instrumentos y materiales para la evaluación
-                diagnóstica.
+                Instrumentos y materiales para
+                la evaluación diagnóstica.
             </p>
 
-            <div class="submenu">
+            <div class="sub-buttons">
 
                 <a href="#" target="_blank">
                     📖 Lectura
@@ -658,8 +1160,6 @@ footer p{
         </div>
 
 
-        <!-- NOVIEMBRE -->
-
         <div class="card">
 
             <div class="icon">📝</div>
@@ -671,7 +1171,7 @@ footer p{
                 de noviembre.
             </p>
 
-            <div class="submenu">
+            <div class="sub-buttons">
 
                 <a href="#" target="_blank">
                     🔤 Grafías
@@ -682,8 +1182,6 @@ footer p{
         </div>
 
 
-        <!-- JUNIO -->
-
         <div class="card">
 
             <div class="icon">📅</div>
@@ -691,10 +1189,11 @@ footer p{
             <h3>Junio</h3>
 
             <p>
-                Material para la evaluación y cierre del ciclo escolar.
+                Material para la evaluación
+                y cierre del ciclo escolar.
             </p>
 
-            <div class="submenu">
+            <div class="sub-buttons">
 
                 <a href="#" target="_blank">
                     📊 Evaluación de cierre
@@ -713,11 +1212,15 @@ footer p{
 </div>
 
 
-<!-- PIE DE PAGINA -->
+<!-- =================================
+     PIE
+================================= -->
 
 <footer>
 
-    <p><strong>Zona Escolar 272</strong></p>
+    <p>
+        <strong>Zona Escolar 272</strong>
+    </p>
 
     <p>
         Portal de materiales, estrategias y evaluaciones
@@ -730,9 +1233,65 @@ footer p{
 </footer>
 
 
-<!-- BUSCADOR -->
+</main>
+
+
+<!-- =================================
+     JAVASCRIPT
+================================= -->
 
 <script>
+
+
+/* ABRIR / CERRAR MENÚ */
+
+function toggleMenu(){
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const overlay =
+        document.getElementById("overlay");
+
+    sidebar.classList.toggle("open");
+
+    overlay.classList.toggle("show");
+
+}
+
+
+/* ABRIR SUBMENÚ */
+
+function toggleSubmenu(button){
+
+    const item =
+        button.parentElement;
+
+    item.classList.toggle("active");
+
+}
+
+
+/* IR AL INICIO */
+
+function irA(id){
+
+    document
+        .getElementById(id)
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    if(window.innerWidth <= 800){
+
+        toggleMenu();
+
+    }
+
+}
+
+
+/* BUSCADOR */
 
 function buscarMaterial(){
 
@@ -763,6 +1322,26 @@ function buscarMaterial(){
     });
 
 }
+
+
+/* CERRAR MENÚ AL HACER CLICK EN UN ENLACE */
+
+document
+.querySelectorAll(".submenu a")
+.forEach(function(enlace){
+
+    enlace.addEventListener("click",function(){
+
+        if(window.innerWidth <= 800){
+
+            toggleMenu();
+
+        }
+
+    });
+
+});
+
 
 </script>
 
