@@ -32,9 +32,23 @@ header{
     text-align:center;
 }
 
-header h1{
-    margin:0;
-    font-size:42px;
+header::after{
+    content:"🇲🇽";
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:24px;
+    opacity:.85;
+}
+    header::after{
+    content:"🇲🇽";
+    position:absolute;
+    bottom:8px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:24px;
+    opacity:.85;
 }
 
 .logo-zona{
