@@ -164,6 +164,36 @@ section h2{
     background:#0d719e;
 }
 
+/* GALERIA DE FOTOGRAFIAS */
+
+.fotos{
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.fotos img{
+    width:100%;
+    height:auto;
+    border-radius:10px;
+    display:block;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+details{
+    margin-top:5px;
+}
+
+details summary{
+    cursor:pointer;
+    list-style:none;
+}
+
+details summary::-webkit-details-marker{
+    display:none;
+}
+
 /* SUBCATEGORIAS */
 
 .submenu{
@@ -221,6 +251,11 @@ footer p{
 
     .container{
         padding:25px 15px;
+    }
+
+    .fotos{
+        grid-template-columns:repeat(2,1fr);
+        gap:8px;
     }
 
 }
@@ -440,22 +475,69 @@ footer p{
         </div>
 
 
-       <div class="card">
+        <!-- ZONA ESCOLAR -->
 
-    <div class="icon">🏫</div>
+        <div class="card">
 
-    <h3>Zona Escolar</h3>
+            <div class="icon">🏫</div>
 
-    <p>
-        Información, documentos y recursos de apoyo para
-        las escuelas de la Zona Escolar 272.
-    </p>
+            <h3>Zona Escolar</h3>
 
-    <a class="btn" href="guia-operativa-2025-2026.pdf" target="_blank">
-        MATERIAL GUIA OPERATIVA 2025-2026
-    </a>
+            <p>
+                Información, documentos y recursos de apoyo para
+                las escuelas de la Zona Escolar 272.
+            </p>
 
-</div>
+            <!-- GUIA OPERATIVA -->
+
+            <a
+                class="btn"
+                href="guia-operativa-2025-2026.pdf"
+                target="_blank"
+            >
+                MATERIAL GUIA OPERATIVA 2025-2026
+            </a>
+
+            <!-- FOTOGRAFIAS -->
+
+            <details>
+
+                <summary class="btn">
+                    📷 VER FOTOGRAFÍAS CTE SEP
+                </summary>
+
+                <div class="fotos">
+
+                    <img
+                        src="CTE%20SEP%201.jpeg"
+                        alt="CTE SEP 1"
+                    >
+
+                    <img
+                        src="CTE%20SEP%202.jpeg"
+                        alt="CTE SEP 2"
+                    >
+
+                    <img
+                        src="CTE%20SEP%203.jpeg"
+                        alt="CTE SEP 3"
+                    >
+
+                    <img
+                        src="CTE%20SEP%204.jpeg"
+                        alt="CTE SEP 4"
+                    >
+
+                </div>
+
+            </details>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 <!-- APOYO A LA LECTURA -->
