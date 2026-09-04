@@ -11,10 +11,6 @@
 
 <style>
 
-/* =====================================================
-   CONFIGURACIÓN GENERAL
-===================================================== */
-
 *{
     box-sizing:border-box;
 }
@@ -32,7 +28,7 @@ body{
 
 
 /* =====================================================
-   ENCABEZADO SUPERIOR
+   ENCABEZADO
 ===================================================== */
 
 .top-header{
@@ -94,16 +90,10 @@ body{
     transition:.3s;
 }
 
-
-/* =====================================================
-   LOGO DEL MENÚ
-===================================================== */
-
 .sidebar-logo{
     text-align:center;
     padding:25px 15px 15px;
-    border-bottom:
-        1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5;
 }
 
 .sidebar-logo img{
@@ -130,8 +120,7 @@ body{
 ===================================================== */
 
 .menu-item{
-    border-bottom:
-        1px solid #eeeeee;
+    border-bottom:1px solid #eeeeee;
 }
 
 .menu-title{
@@ -180,33 +169,23 @@ body{
 
 .submenu a{
     display:block;
-    padding:
-        13px 20px 13px 48px;
+    padding:13px 20px 13px 48px;
     color:#455a64;
     text-decoration:none;
     font-size:14px;
-    border-left:
-        4px solid transparent;
+    border-left:4px solid transparent;
     cursor:pointer;
 }
 
 .submenu a:hover{
     background:#e1f0f6;
     color:#1976a8;
-    border-left:
-        4px solid #1976a8;
-}
-
-.submenu a.selected{
-    background:#dceff7;
-    color:#1976a8;
-    border-left:
-        4px solid #1976a8;
+    border-left:4px solid #1976a8;
 }
 
 
 /* =====================================================
-   CONTENIDO PRINCIPAL
+   CONTENIDO
 ===================================================== */
 
 .main{
@@ -217,7 +196,7 @@ body{
 
 
 /* =====================================================
-   PRESENTACIÓN PRINCIPAL
+   PRESENTACIÓN
 ===================================================== */
 
 .presentation{
@@ -257,8 +236,7 @@ body{
 .presentation h2{
     font-size:24px;
     font-weight:normal;
-    margin:
-        10px 0 20px;
+    margin:10px 0 20px;
 }
 
 .presentation p{
@@ -278,18 +256,12 @@ body{
     padding:40px 30px;
 }
 
-
-/* =====================================================
-   PRESENTACIÓN DE LA PÁGINA
-===================================================== */
-
 .page-introduction{
     background:white;
     border-radius:16px;
     padding:30px;
     margin-bottom:30px;
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.08);
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
     text-align:center;
 }
 
@@ -333,20 +305,17 @@ body{
 ===================================================== */
 
 .search-box{
-    margin:
-        0 0 35px;
+    margin:0 0 35px;
 }
 
 .search-box input{
     width:100%;
     padding:17px 20px;
-    border:
-        1px solid #ccd6dc;
+    border:1px solid #ccd6dc;
     border-radius:12px;
     font-size:16px;
     outline:none;
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.05);
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 
 .search-box input:focus{
@@ -368,8 +337,7 @@ body{
 
 .content-section h2{
     color:#174f73;
-    border-bottom:
-        3px solid #1976a8;
+    border-bottom:3px solid #1976a8;
     padding-bottom:10px;
     margin-bottom:25px;
 }
@@ -390,16 +358,13 @@ body{
     background:white;
     border-radius:15px;
     padding:25px;
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.10);
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
     transition:.2s;
 }
 
 .card:hover{
-    transform:
-        translateY(-3px);
-    box-shadow:
-        0 7px 20px rgba(0,0,0,.15);
+    transform:translateY(-3px);
+    box-shadow:0 7px 20px rgba(0,0,0,.15);
 }
 
 .icon{
@@ -427,13 +392,12 @@ body{
     object-fit:cover;
     border-radius:12px;
     margin-bottom:18px;
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.12);
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
 }
 
 
 /* =====================================================
-   BOTONES GENERALES
+   BOTONES
 ===================================================== */
 
 .btn{
@@ -453,11 +417,6 @@ body{
 .btn:hover{
     background:#0d719e;
 }
-
-
-/* =====================================================
-   BOTONES VER Y DESCARGAR
-===================================================== */
 
 .document-buttons{
     display:flex;
@@ -489,8 +448,7 @@ body{
 
 .documento{
     background:#ffffff;
-    border:
-        1px solid #d5e7ef;
+    border:1px solid #d5e7ef;
     border-radius:10px;
     padding:13px;
     margin-bottom:10px;
@@ -510,27 +468,9 @@ body{
 
 .sub-buttons{
     display:grid;
-    grid-template-columns:
-        1fr;
+    grid-template-columns:1fr;
     gap:10px;
     margin-top:18px;
-}
-
-.sub-buttons > a{
-    display:block;
-    background:#eef6fa;
-    color:#174f73;
-    padding:15px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    border:
-        1px solid #d5e7ef;
-    cursor:pointer;
-}
-
-.sub-buttons > a:hover{
-    background:#dceff7;
 }
 
 
@@ -555,8 +495,7 @@ details summary::-webkit-details-marker{
 .fotos{
     margin-top:20px;
     display:grid;
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:12px;
 }
 
@@ -565,8 +504,7 @@ details summary::-webkit-details-marker{
     height:auto;
     border-radius:10px;
     display:block;
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.15);
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 
@@ -581,8 +519,7 @@ details summary::-webkit-details-marker{
             #eef6fa,
             #ffffff
         );
-    border-left:
-        5px solid #1976a8;
+    border-left:5px solid #1976a8;
     padding:25px;
     border-radius:12px;
     margin-bottom:25px;
@@ -616,15 +553,14 @@ footer p{
 
 
 /* =====================================================
-   FONDO PARA CELULAR
+   CELULAR
 ===================================================== */
 
 .overlay{
     display:none;
     position:fixed;
     inset:0;
-    background:
-        rgba(0,0,0,.45);
+    background:rgba(0,0,0,.45);
     z-index:1400;
 }
 
@@ -641,13 +577,11 @@ footer p{
 
     .sidebar{
         width:270px;
-        transform:
-            translateX(-100%);
+        transform:translateX(-100%);
     }
 
     .sidebar.open{
-        transform:
-            translateX(0);
+        transform:translateX(0);
     }
 
     .main{
@@ -680,29 +614,14 @@ footer p{
     }
 
     .container{
-        padding:
-            25px 15px;
+        padding:25px 15px;
     }
 
     .fotos{
-        grid-template-columns:
-            1fr 1fr;
-    }
-
-    .document-buttons{
-        flex-direction:row;
-    }
-
-    .document-buttons .btn{
-        width:auto;
+        grid-template-columns:1fr 1fr;
     }
 
 }
-
-
-/* =====================================================
-   CELULAR MUY PEQUEÑO
-===================================================== */
 
 @media(max-width:450px){
 
@@ -718,17 +637,20 @@ footer p{
         grid-template-columns:1fr;
     }
 
-    .document-buttons{
-        flex-direction:row;
-    }
+}
 
-    .document-buttons .btn{
-        width:auto;
-        text-align:center;
-        padding:7px 10px;
-        font-size:11px;
-    }
 
+/* =====================================================
+   VISOR PDF
+===================================================== */
+
+.pdf-viewer{
+    width:100%;
+    height:80vh;
+    border:none;
+    border-radius:12px;
+    background:white;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
 }
 
 </style>
@@ -738,10 +660,6 @@ footer p{
 
 <body>
 
-
-<!-- =====================================================
-     ENCABEZADO
-===================================================== -->
 
 <header class="top-header">
 
@@ -763,10 +681,6 @@ footer p{
 </header>
 
 
-
-<!-- =====================================================
-     MENÚ LATERAL
-===================================================== -->
 
 <aside
     class="sidebar"
@@ -791,10 +705,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         INICIO
-    ================================================== -->
+    <!-- INICIO -->
 
     <div class="menu-item">
 
@@ -812,10 +723,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         CONSEJO TÉCNICO
-    ================================================== -->
+    <!-- CONSEJO TÉCNICO -->
 
     <div class="menu-item">
 
@@ -853,10 +761,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         EXPERIENCIAS
-    ================================================== -->
+    <!-- EXPERIENCIAS -->
 
     <div class="menu-item">
 
@@ -890,10 +795,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         LECTURA Y ESCRITURA
-    ================================================== -->
+    <!-- LECTURA Y ESCRITURA -->
 
     <div class="menu-item">
 
@@ -939,10 +841,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         ADMINISTRATIVOS Y NORMATIVOS
-    ================================================== -->
+    <!-- ADMINISTRATIVOS Y NORMATIVOS -->
 
     <div class="menu-item">
 
@@ -984,10 +883,7 @@ footer p{
     </div>
 
 
-
-    <!-- =================================================
-         EVALUACIONES
-    ================================================== -->
+    <!-- EVALUACIONES -->
 
     <div class="menu-item">
 
@@ -1024,14 +920,9 @@ footer p{
 
     </div>
 
-
 </aside>
 
 
-
-<!-- =====================================================
-     FONDO PARA CELULAR
-===================================================== -->
 
 <div
     class="overlay"
@@ -1041,10 +932,6 @@ footer p{
 
 
 
-<!-- =====================================================
-     CONTENIDO PRINCIPAL
-===================================================== -->
-
 <main class="main">
 
 
@@ -1052,10 +939,7 @@ footer p{
      INICIO
 ===================================================== -->
 
-<div
-    id="inicio"
-    class="inicio"
->
+<div id="inicio" class="inicio">
 
     <div class="presentation">
 
@@ -1087,7 +971,6 @@ footer p{
     </div>
 
 
-
     <div class="container">
 
         <div class="page-introduction">
@@ -1113,8 +996,6 @@ footer p{
 
         </div>
 
-
-
         <div class="search-box">
 
             <input
@@ -1136,10 +1017,7 @@ footer p{
      CONSEJO TÉCNICO
 ===================================================== -->
 
-<section
-    id="consejo"
-    class="content-section"
->
+<section id="consejo" class="content-section">
 
     <div class="container">
 
@@ -1198,7 +1076,6 @@ footer p{
                 </div>
 
             </div>
-
 
 
             <div class="card">
@@ -1268,10 +1145,7 @@ footer p{
      EXPERIENCIAS
 ===================================================== -->
 
-<section
-    id="experiencias"
-    class="content-section"
->
+<section id="experiencias" class="content-section">
 
     <div class="container">
 
@@ -1332,7 +1206,6 @@ footer p{
             </div>
 
 
-
             <div class="card">
 
                 <img
@@ -1385,13 +1258,10 @@ footer p{
 
 
 <!-- =====================================================
-     APOYO A LA LECTURA Y ESCRITURA
+     LECTURA Y ESCRITURA
 ===================================================== -->
 
-<section
-    id="lectura"
-    class="content-section"
->
+<section id="lectura" class="content-section">
 
     <div class="container">
 
@@ -1483,8 +1353,6 @@ footer p{
                 <div class="sub-buttons">
 
 
-                    <!-- 2° GRADO -->
-
                     <div class="documento">
 
                         <strong>
@@ -1513,9 +1381,6 @@ footer p{
 
                     </div>
 
-
-
-                    <!-- 3° GRADO -->
 
                     <div class="documento">
 
@@ -1546,9 +1411,6 @@ footer p{
                     </div>
 
 
-
-                    <!-- 4° GRADO -->
-
                     <div class="documento">
 
                         <strong>
@@ -1578,9 +1440,6 @@ footer p{
                     </div>
 
 
-
-                    <!-- 5° GRADO -->
-
                     <div class="documento">
 
                         <strong>
@@ -1609,9 +1468,6 @@ footer p{
 
                     </div>
 
-
-
-                    <!-- 6° GRADO -->
 
                     <div class="documento">
 
@@ -1694,7 +1550,7 @@ footer p{
 
 
 
-            <!-- FORMULACIÓN DEL PROGRAMA ANALÍTICO -->
+            <!-- PROGRAMA ANALÍTICO -->
 
             <div class="card">
 
@@ -1741,7 +1597,7 @@ footer p{
 
 
 
-            <!-- ORGANIZACIÓN DE LAS SESIONES DE TRABAJO -->
+            <!-- ORGANIZACIÓN DE SESIONES -->
 
             <div class="card">
 
@@ -1798,10 +1654,7 @@ footer p{
      ADMINISTRATIVOS Y NORMATIVOS
 ===================================================== -->
 
-<section
-    id="administrativos"
-    class="content-section"
->
+<section id="administrativos" class="content-section">
 
     <div class="container">
 
@@ -1831,7 +1684,6 @@ footer p{
             </p>
 
         </div>
-
 
 
         <div class="grid">
@@ -1892,7 +1744,6 @@ footer p{
                     </div>
 
 
-
                     <div class="documento">
 
                         <strong>
@@ -1927,117 +1778,23 @@ footer p{
 
 
 
-           <!-- MATERIAL NORMATIVO -->
+            <!-- =================================================
+                 MATERIAL NORMATIVO
+            ================================================== -->
 
-<div class="card">
+            <div class="card">
 
-    <img
-        src="LOGO272.jfif"
-        alt="Material normativo"
-        class="card-image"
-    >
-
-    <div class="icon">
-
-        ⚖️
-
-    </div>
-
-    <h3>
-
-        Material normativo
-
-    </h3>
-
-    <p>
-
-        Reglamentos, lineamientos, acuerdos y demás
-        disposiciones que orientan la operación
-        de las escuelas.
-
-    </p>
-
-    <div class="sub-buttons">
-
-
-        <div class="documento">
-
-            <strong>
-
-                ⚖️ Normatividad
-
-            </strong>
-
-
-            <div class="document-buttons">
-
-                <a
-                    href="#"
-                    target="_blank"
-                    class="btn"
+                <img
+                    src="LOGO272.jfif"
+                    alt="Material normativo"
+                    class="card-image"
                 >
 
-                    📖 VER
+                <div class="icon">
+                    ⚖️
+                </div>
 
-                </a>
-
-
-                <a
-                    href="#"
-                    download
-                    class="btn btn-download"
-                >
-
-                    ⬇️ DESCARGAR
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="documento">
-
-            <strong>
-
-                📘 Lineamientos
-
-            </strong>
-
-
-            <div class="document-buttons">
-
-                <a
-                    href="#"
-                    target="_blank"
-                    class="btn"
-                >
-
-                    📖 VER
-
-                </a>
-
-
-                <a
-                    href="#"
-                    download
-                    class="btn btn-download"
-                >
-
-                    ⬇️ DESCARGAR
-
-                </a>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</div>
+                <h3>
                     Material normativo
                 </h3>
 
@@ -2061,7 +1818,7 @@ footer p{
                         <div class="document-buttons">
 
                             <a
-                                href="Ley General De Responsabilidades Administrativas.pdf"
+                                href="Ley%20General%20De%20Responsabilidades%20Administrativas.pdf"
                                 target="_blank"
                                 class="btn"
                             >
@@ -2069,7 +1826,7 @@ footer p{
                             </a>
 
                             <a
-                                href="Ley General De Responsabilidades Administrativas.pdf"
+                                href="Ley%20General%20De%20Responsabilidades%20Administrativas.pdf"
                                 download
                                 class="btn btn-download"
                             >
@@ -2112,16 +1869,13 @@ footer p{
 
                     </div>
 
-
                 </div>
 
             </div>
 
 
 
-            <!-- =================================================
-                 GUÍAS OPERATIVAS
-            ================================================== -->
+            <!-- GUÍAS OPERATIVAS -->
 
             <div class="card">
 
@@ -2168,9 +1922,7 @@ footer p{
 
 
 
-            <!-- =================================================
-                 RECOMENDACIÓN AEFCM
-            ================================================== -->
+            <!-- RECOMENDACIÓN AEFCM -->
 
             <div class="card">
 
@@ -2215,7 +1967,6 @@ footer p{
 
             </div>
 
-
         </div>
 
     </div>
@@ -2228,10 +1979,7 @@ footer p{
      EVALUACIONES
 ===================================================== -->
 
-<section
-    id="evaluaciones"
-    class="content-section"
->
+<section id="evaluaciones" class="content-section">
 
     <div class="container">
 
@@ -2248,8 +1996,6 @@ footer p{
 
         <div class="grid">
 
-
-            <!-- DIAGNÓSTICO -->
 
             <div class="card">
 
@@ -2303,7 +2049,6 @@ footer p{
                     </div>
 
 
-
                     <div class="documento">
 
                         <strong>
@@ -2331,7 +2076,6 @@ footer p{
                         </div>
 
                     </div>
-
 
 
                     <div class="documento">
@@ -2366,9 +2110,6 @@ footer p{
 
             </div>
 
-
-
-            <!-- NOVIEMBRE -->
 
             <div class="card">
 
@@ -2426,9 +2167,6 @@ footer p{
             </div>
 
 
-
-            <!-- JUNIO -->
-
             <div class="card">
 
                 <img
@@ -2484,7 +2222,6 @@ footer p{
 
             </div>
 
-
         </div>
 
     </div>
@@ -2492,10 +2229,6 @@ footer p{
 </section>
 
 
-
-<!-- =====================================================
-     PIE DE PÁGINA
-===================================================== -->
 
 <footer>
 
@@ -2521,15 +2254,11 @@ footer p{
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
 
 /* =====================================================
-   ABRIR / CERRAR MENÚ
+   MENÚ
 ===================================================== */
 
 function toggleMenu(){
@@ -2547,9 +2276,8 @@ function toggleMenu(){
 }
 
 
-
 /* =====================================================
-   ABRIR / CERRAR SUBMENÚ
+   SUBMENÚ
 ===================================================== */
 
 function toggleSubmenu(button){
@@ -2562,9 +2290,8 @@ function toggleSubmenu(button){
 }
 
 
-
 /* =====================================================
-   MOSTRAR UNA SECCIÓN
+   MOSTRAR SECCIÓN
 ===================================================== */
 
 function mostrarSeccion(id){
@@ -2619,7 +2346,6 @@ function mostrarSeccion(id){
 }
 
 
-
 /* =====================================================
    MOSTRAR INICIO
 ===================================================== */
@@ -2667,9 +2393,8 @@ function mostrarInicio(){
 }
 
 
-
 /* =====================================================
-   BUSCADOR DEL INICIO
+   BUSCADOR
 ===================================================== */
 
 function buscarInicio(){
@@ -2717,9 +2442,8 @@ function buscarInicio(){
 }
 
 
-
 /* =====================================================
-   BUSCADOR DENTRO DE UNA SECCIÓN
+   BUSCADOR DENTRO DE SECCIÓN
 ===================================================== */
 
 function buscarEnSeccion(input,id){
