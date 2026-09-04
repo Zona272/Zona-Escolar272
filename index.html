@@ -1,1282 +1,3123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Zona Escolar No. 272</title>
+
+
 <style>
+
 /* =====================================================
    CONFIGURACIÓN GENERAL
 ===================================================== */
+
 *{
     box-sizing:border-box;
 }
+
 html{
     scroll-behavior:smooth;
 }
+
 body{
+
     margin:0;
+
     font-family:Arial, Helvetica, sans-serif;
+
     background:#f4f7fb;
+
     color:#263238;
+
 }
+
+
 /* =====================================================
    ENCABEZADO SUPERIOR
 ===================================================== */
+
 .top-header{
+
     height:85px;
-    background:linear-gradient(135deg,#123b5d,#1976a8);
+
+    background:
+        linear-gradient(
+            135deg,
+            #123b5d,
+            #1976a8
+        );
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     padding:0 25px;
+
     position:fixed;
+
     top:0;
+
     left:0;
+
     right:0;
+
     z-index:2000;
-    box-shadow:0 3px 12px rgba(0,0,0,.20);
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.20);
+
 }
+
+
 .menu-button{
+
     font-size:28px;
+
     cursor:pointer;
+
     margin-right:20px;
+
     width:45px;
+
     text-align:center;
+
 }
+
+
 .top-title{
+
     font-size:22px;
+
     font-weight:bold;
+
 }
+
+
 .top-subtitle{
+
     font-size:13px;
+
     opacity:.9;
+
     margin-left:15px;
+
 }
+
+
 /* =====================================================
    MENÚ LATERAL
 ===================================================== */
+
 .sidebar{
+
     position:fixed;
+
     left:0;
+
     top:85px;
+
     bottom:0;
+
     width:285px;
+
     background:#ffffff;
-    box-shadow:3px 0 12px rgba(0,0,0,.12);
+
+    box-shadow:
+        3px 0 12px rgba(0,0,0,.12);
+
     overflow-y:auto;
+
     z-index:1500;
+
     transition:.3s;
+
 }
-/* LOGO DEL MENÚ */
+
+
+/* =====================================================
+   LOGO DEL MENÚ
+===================================================== */
+
 .sidebar-logo{
+
     text-align:center;
+
     padding:25px 15px 15px;
-    border-bottom:1px solid #e5e5e5;
+
+    border-bottom:
+        1px solid #e5e5e5;
+
 }
+
+
 .sidebar-logo img{
+
     width:105px;
+
     height:105px;
+
     object-fit:contain;
+
 }
+
+
 .sidebar-logo h2{
+
     color:#174f73;
+
     font-size:17px;
+
     margin:10px 0 3px;
+
 }
+
+
 .sidebar-logo p{
+
     color:#78909c;
+
     font-size:12px;
+
     margin:0;
+
 }
+
+
 /* =====================================================
    BOTONES DEL MENÚ
 ===================================================== */
+
 .menu-item{
-    border-bottom:1px solid #eeeeee;
+
+    border-bottom:
+        1px solid #eeeeee;
+
 }
+
+
 .menu-title{
+
     width:100%;
+
     border:0;
+
     background:white;
+
     color:#263238;
+
     padding:17px 20px;
+
     text-align:left;
+
     font-size:15px;
+
     font-weight:bold;
+
     cursor:pointer;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     transition:.2s;
+
 }
+
+
 .menu-title:hover{
+
     background:#eef6fa;
+
     color:#1976a8;
+
 }
+
+
 .menu-title .arrow{
+
     transition:.3s;
+
 }
+
+
 .menu-item.active .arrow{
+
     transform:rotate(90deg);
+
 }
+
+
 /* =====================================================
    SUBMENÚ
 ===================================================== */
+
 .submenu{
+
     display:none;
+
     background:#f4f8fa;
+
     padding:5px 0;
+
 }
+
+
 .menu-item.active .submenu{
+
     display:block;
+
 }
+
+
 .submenu a{
+
     display:block;
-    padding:13px 20px 13px 48px;
+
+    padding:
+        13px 20px 13px 48px;
+
     color:#455a64;
+
     text-decoration:none;
+
     font-size:14px;
-    border-left:4px solid transparent;
+
+    border-left:
+        4px solid transparent;
+
+    cursor:pointer;
+
 }
+
+
 .submenu a:hover{
+
     background:#e1f0f6;
+
     color:#1976a8;
-    border-left:4px solid #1976a8;
+
+    border-left:
+        4px solid #1976a8;
+
 }
+
+
+/* =====================================================
+   ELEMENTO ACTIVO DEL SUBMENÚ
+===================================================== */
+
+.submenu a.selected{
+
+    background:#dceff7;
+
+    color:#1976a8;
+
+    border-left:
+        4px solid #1976a8;
+
+}
+
+
 /* =====================================================
    CONTENIDO PRINCIPAL
 ===================================================== */
+
 .main{
+
     margin-left:285px;
+
     padding-top:85px;
+
     min-height:100vh;
+
 }
+
+
 /* =====================================================
    PRESENTACIÓN PRINCIPAL
 ===================================================== */
+
 .presentation{
+
     min-height:460px;
+
     background:
+
         linear-gradient(
             rgba(18,59,93,.90),
             rgba(25,118,168,.88)
         ),
+
         url("LOGO272.jfif");
+
     background-size:cover;
+
     background-position:center;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     text-align:center;
+
     color:white;
+
     padding:60px 30px;
+
 }
+
+
 .presentation-content{
+
     max-width:850px;
+
 }
+
+
 .presentation-logo{
+
     width:160px;
+
     height:160px;
+
     object-fit:contain;
+
     margin-bottom:15px;
+
 }
+
+
 .presentation h1{
+
     font-size:42px;
+
     margin:10px 0;
+
 }
+
+
 .presentation h2{
+
     font-size:24px;
+
     font-weight:normal;
-    margin:10px 0 20px;
+
+    margin:
+        10px 0 20px;
+
 }
+
+
 .presentation p{
+
     font-size:17px;
+
     line-height:1.8;
+
     margin:auto;
+
 }
+
+
 /* =====================================================
    CONTENEDOR
 ===================================================== */
+
 .container{
+
     max-width:1200px;
+
     margin:auto;
+
     padding:40px 30px;
+
 }
+
+
 /* =====================================================
    PRESENTACIÓN DE LA PÁGINA
 ===================================================== */
+
 .page-introduction{
+
     background:white;
+
     border-radius:16px;
+
     padding:30px;
-    margin-bottom:40px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+
+    margin-bottom:30px;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.08);
+
     text-align:center;
+
 }
+
+
 .page-introduction h2{
+
     color:#174f73;
+
     margin-top:0;
+
 }
+
+
 .page-introduction p{
+
     color:#607d8b;
+
     line-height:1.7;
+
     max-width:850px;
+
     margin:10px auto;
+
 }
+
+
+/* =====================================================
+   BOTÓN REGRESAR
+===================================================== */
+
+.back-home{
+
+    display:inline-block;
+
+    background:#123b5d;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:11px 18px;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+    cursor:pointer;
+
+}
+
+
+.back-home:hover{
+
+    background:#1976a8;
+
+}
+
+
 /* =====================================================
    BUSCADOR
 ===================================================== */
+
 .search-box{
-    margin:25px 0 45px;
+
+    margin:
+        0 0 35px;
+
 }
+
+
 .search-box input{
+
     width:100%;
+
     padding:17px 20px;
-    border:1px solid #ccd6dc;
+
+    border:
+        1px solid #ccd6dc;
+
     border-radius:12px;
+
     font-size:16px;
+
     outline:none;
-    box-shadow:0 2px 8px rgba(0,0,0,.05);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,.05);
+
 }
+
+
 .search-box input:focus{
+
     border-color:#1976a8;
+
 }
+
+
 /* =====================================================
    SECCIONES
+
+   IMPORTANTE:
+   TODAS ESTÁN OCULTAS.
+   SOLO SE MUESTRA LA QUE ESTÉ ACTIVA.
 ===================================================== */
-section{
-    margin-bottom:60px;
-    scroll-margin-top:105px;
+
+.content-section{
+
+    display:none;
+
 }
-section h2{
+
+
+.content-section.active{
+
+    display:block;
+
+}
+
+
+.content-section h2{
+
     color:#174f73;
-    border-bottom:3px solid #1976a8;
+
+    border-bottom:
+        3px solid #1976a8;
+
     padding-bottom:10px;
+
     margin-bottom:25px;
+
 }
+
+
 /* =====================================================
    TARJETAS
 ===================================================== */
+
 .grid{
+
     display:grid;
+
     grid-template-columns:
         repeat(auto-fit,minmax(280px,1fr));
+
     gap:25px;
+
 }
+
+
 .card{
+
     background:white;
+
     border-radius:15px;
+
     padding:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.10);
+
     transition:.2s;
+
 }
+
+
 .card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 7px 20px rgba(0,0,0,.15);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.15);
+
 }
+
+
 .icon{
+
     font-size:42px;
+
 }
+
+
 .card h3{
+
     color:#174f73;
+
     margin-bottom:10px;
+
 }
+
+
 .card p{
+
     color:#607d8b;
+
     line-height:1.6;
+
 }
+
+
 /* =====================================================
-   IMÁGENES PARA SEPARAR INFORMACIÓN
+   IMÁGENES
 ===================================================== */
+
 .card-image{
+
     width:100%;
+
     height:180px;
+
     object-fit:cover;
+
     border-radius:12px;
+
     margin-bottom:18px;
-    box-shadow:0 3px 10px rgba(0,0,0,.12);
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.12);
+
 }
+
+
 /* =====================================================
    BOTONES
 ===================================================== */
+
 .btn{
+
     display:inline-block;
+
     background:#1597d1;
+
     color:white;
+
     text-decoration:none;
+
     padding:12px 20px;
+
     border-radius:8px;
+
     font-weight:bold;
+
     margin-top:10px;
+
     border:none;
+
     cursor:pointer;
+
 }
+
+
 .btn:hover{
+
     background:#0d719e;
+
 }
+
+
 /* =====================================================
    SUBCATEGORÍAS
 ===================================================== */
+
 .sub-buttons{
+
     display:grid;
+
     grid-template-columns:
         repeat(auto-fit,minmax(180px,1fr));
+
     gap:12px;
+
     margin-top:20px;
+
 }
+
+
 .sub-buttons a{
+
     display:block;
+
     background:#eef6fa;
+
     color:#174f73;
+
     padding:17px;
+
     border-radius:10px;
+
     text-decoration:none;
+
     font-weight:bold;
-    border:1px solid #d5e7ef;
+
+    border:
+        1px solid #d5e7ef;
+
+    cursor:pointer;
+
 }
+
+
 .sub-buttons a:hover{
+
     background:#dceff7;
+
 }
+
+
 /* =====================================================
    FOTOGRAFÍAS
 ===================================================== */
+
 details{
+
     margin-top:15px;
+
 }
+
+
 details summary{
+
     cursor:pointer;
+
     list-style:none;
+
     display:inline-block;
+
 }
+
+
 details summary::-webkit-details-marker{
+
     display:none;
+
 }
+
+
 .fotos{
+
     margin-top:20px;
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:12px;
+
 }
+
+
 .fotos img{
+
     width:100%;
+
     height:auto;
+
     border-radius:10px;
+
     display:block;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.15);
+
 }
+
+
 /* =====================================================
    BLOQUE DESTACADO
 ===================================================== */
+
 .featured{
+
     background:
         linear-gradient(
             135deg,
             #eef6fa,
             #ffffff
         );
-    border-left:5px solid #1976a8;
+
+    border-left:
+        5px solid #1976a8;
+
     padding:25px;
+
     border-radius:12px;
+
     margin-bottom:25px;
+
 }
+
+
 .featured h3{
+
     margin-top:0;
+
     color:#174f73;
+
 }
+
+
 .featured p{
+
     margin-bottom:0;
+
 }
+
+
+/* =====================================================
+   MENSAJE DE BUSCADOR SIN RESULTADOS
+===================================================== */
+
+.no-results{
+
+    display:none;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    color:#78909c;
+
+}
+
+
 /* =====================================================
    PIE DE PÁGINA
 ===================================================== */
+
 footer{
+
     background:#123b5d;
+
     color:white;
+
     text-align:center;
+
     padding:35px 20px;
+
+    margin-top:40px;
+
 }
+
+
 footer p{
+
     margin:7px;
+
 }
+
+
 /* =====================================================
-   FONDO PARA MENÚ EN CELULAR
+   FONDO PARA CELULAR
 ===================================================== */
+
 .overlay{
+
     display:none;
+
     position:fixed;
+
     inset:0;
-    background:rgba(0,0,0,.45);
+
+    background:
+        rgba(0,0,0,.45);
+
     z-index:1400;
+
 }
+
+
 .overlay.show{
+
     display:block;
+
 }
+
+
 /* =====================================================
-   DISEÑO RESPONSIVO
+   RESPONSIVO
 ===================================================== */
+
 @media(max-width:800px){
+
+
     .sidebar{
+
         width:270px;
-        transform:translateX(-100%);
+
+        transform:
+            translateX(-100%);
+
     }
+
+
     .sidebar.open{
-        transform:translateX(0);
+
+        transform:
+            translateX(0);
+
     }
+
+
     .main{
+
         margin-left:0;
+
     }
+
+
     .top-title{
+
         font-size:17px;
+
     }
+
+
     .top-subtitle{
+
         display:none;
+
     }
+
+
     .presentation{
+
         min-height:420px;
+
     }
+
+
     .presentation h1{
+
         font-size:30px;
+
     }
+
+
     .presentation h2{
+
         font-size:19px;
+
     }
+
+
     .presentation-logo{
+
         width:125px;
+
         height:125px;
+
     }
+
+
     .container{
-        padding:25px 15px;
+
+        padding:
+            25px 15px;
+
     }
+
+
     .fotos{
-        grid-template-columns:1fr 1fr;
+
+        grid-template-columns:
+            1fr 1fr;
+
     }
+
+
 }
+
+
+/* =====================================================
+   CELULAR MUY PEQUEÑO
+===================================================== */
+
+@media(max-width:450px){
+
+    .presentation h1{
+
+        font-size:26px;
+
+    }
+
+    .presentation p{
+
+        font-size:15px;
+
+    }
+
+    .fotos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
+
+
 <!-- =====================================================
-     ENCABEZADO
+     ENCABEZADO SUPERIOR
 ===================================================== -->
+
 <header class="top-header">
+
+
     <div
         class="menu-button"
         onclick="toggleMenu()"
     >
+
         ☰
+
     </div>
+
+
     <div class="top-title">
+
         ZONA ESCOLAR 272
+
     </div>
+
+
     <div class="top-subtitle">
+
         Portal de materiales y recursos educativos
+
     </div>
+
+
 </header>
+
+
+
 <!-- =====================================================
      MENÚ LATERAL
 ===================================================== -->
-<aside class="sidebar" id="sidebar">
+
+<aside
+    class="sidebar"
+    id="sidebar"
+>
+
+
+    <!-- LOGO -->
+
     <div class="sidebar-logo">
+
+
         <img
             src="LOGO272.jfif"
             alt="Logo Zona Escolar 272"
         >
+
+
         <h2>
+
             Zona Escolar No. 272
+
         </h2>
+
+
         <p>
+
             Ciclo Escolar 2026–2027
+
         </p>
+
+
     </div>
-    <!-- INICIO -->
+
+
+
+    <!-- =================================================
+         INICIO
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
-            onclick="irA('inicio')"
+            onclick="mostrarInicio()"
         >
+
             <span>
+
                 🏠 Inicio
+
             </span>
+
         </button>
+
+
     </div>
-    <!-- MATERIAL DIDÁCTICO -->
+
+
+
+    <!-- =================================================
+         MATERIAL DIDÁCTICO
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 📚 Material didáctico
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#material">
+
+
+            <a
+                onclick="mostrarSeccion('material')"
+            >
+
                 📖 Libros de lectura
+
             </a>
-            <a href="#material">
+
+
+            <a
+                onclick="mostrarSeccion('material')"
+            >
+
                 🖨️ Material imprimible
+
             </a>
+
+
         </div>
+
+
     </div>
-    <!-- CONSEJO TÉCNICO -->
+
+
+
+    <!-- =================================================
+         CONSEJO TÉCNICO
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 📝 Consejo Técnico
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#consejo">
+
+
+            <a
+                onclick="mostrarSeccion('consejo')"
+            >
+
                 📋 Descargas
+
             </a>
-            <a href="#consejo">
+
+
+            <a
+                onclick="mostrarSeccion('consejo')"
+            >
+
                 📅 Sesiones CTE
+
             </a>
-            <a href="#consejo">
+
+
+            <a
+                onclick="mostrarSeccion('consejo')"
+            >
+
                 📷 Fotografías
+
             </a>
+
+
         </div>
+
+
     </div>
-    <!-- EXPERIENCIAS -->
+
+
+
+    <!-- =================================================
+         EXPERIENCIAS
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 👩‍🏫 Experiencias
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#experiencias">
+
+
+            <a
+                onclick="mostrarSeccion('experiencias')"
+            >
+
                 👩‍🏫 Estrategias docentes
+
             </a>
-            <a href="#experiencias">
+
+
+            <a
+                onclick="mostrarSeccion('experiencias')"
+            >
+
                 👨‍💼 Estrategias para directores
+
             </a>
+
+
         </div>
+
+
     </div>
-    <!-- APOYO A LA LECTURA Y ESCRITURA -->
+
+
+
+    <!-- =================================================
+         LECTURA Y ESCRITURA
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 📖 Apoyo a la lectura y escritura
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#lectura">
+
+
+            <a
+                onclick="mostrarSeccion('lectura')"
+            >
+
                 📚 Centro de Maestros
+
             </a>
-            <a href="#lectura">
+
+
+            <a
+                onclick="mostrarSeccion('lectura')"
+            >
+
                 📖 Estrategias de lectura
+
             </a>
-            <a href="#lectura">
+
+
+            <a
+                onclick="mostrarSeccion('lectura')"
+            >
+
                 ✍️ Estrategias de escritura
+
             </a>
+
+
         </div>
+
+
     </div>
-    <!-- MATERIALES ADMINISTRATIVOS Y NORMATIVOS -->
+
+
+
+    <!-- =================================================
+         ADMINISTRATIVOS Y NORMATIVOS
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 📋 Materiales administrativos y normativos
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#administrativos">
+
+
+            <a
+                onclick="mostrarSeccion('administrativos')"
+            >
+
                 📄 Material administrativo
+
             </a>
-            <a href="#administrativos">
+
+
+            <a
+                onclick="mostrarSeccion('administrativos')"
+            >
+
                 ⚖️ Material normativo
+
             </a>
-            <a href="#administrativos">
+
+
+            <a
+                onclick="mostrarSeccion('administrativos')"
+            >
+
                 📘 Guías operativas
+
             </a>
+
+
         </div>
+
+
     </div>
-    <!-- EVALUACIONES -->
+
+
+
+    <!-- =================================================
+         EVALUACIONES
+    ================================================== -->
+
     <div class="menu-item">
+
+
         <button
             class="menu-title"
             onclick="toggleSubmenu(this)"
         >
+
             <span>
+
                 📊 Avance y evaluaciones
+
             </span>
+
+
             <span class="arrow">
+
                 ›
+
             </span>
+
         </button>
+
+
         <div class="submenu">
-            <a href="#evaluaciones">
+
+
+            <a
+                onclick="mostrarSeccion('evaluaciones')"
+            >
+
                 🔎 Diagnóstico
+
             </a>
-            <a href="#evaluaciones">
+
+
+            <a
+                onclick="mostrarSeccion('evaluaciones')"
+            >
+
                 📝 Noviembre
+
             </a>
-            <a href="#evaluaciones">
+
+
+            <a
+                onclick="mostrarSeccion('evaluaciones')"
+            >
+
                 📅 Junio
+
             </a>
+
+
         </div>
+
+
     </div>
+
+
 </aside>
-<!-- FONDO PARA CELULAR -->
+
+
+
+<!-- =====================================================
+     FONDO PARA CELULAR
+===================================================== -->
+
 <div
     class="overlay"
     id="overlay"
     onclick="toggleMenu()"
 ></div>
+
+
+
 <!-- =====================================================
      CONTENIDO PRINCIPAL
 ===================================================== -->
-<main class="main" id="inicio">
-<!-- =====================================================
-     PRESENTACIÓN
-===================================================== -->
-<div class="presentation">
-    <div class="presentation-content">
-        <img
-            src="LOGO272.jfif"
-            alt="Logo Zona Escolar 272"
-            class="presentation-logo"
-        >
-        <h1>
-            ZONA ESCOLAR 272
-        </h1>
-        <h2>
-            Bienvenidos a nuestro espacio educativo
-        </h2>
-        <p>
-            Un espacio destinado a compartir materiales,
-            estrategias, experiencias y recursos que apoyen
-            el trabajo educativo de las escuelas que integran
-            nuestra Zona Escolar.
-        </p>
-    </div>
-</div>
-<div class="container">
-<!-- =====================================================
-     BREVE PRESENTACIÓN DE LA PÁGINA
-===================================================== -->
-<div class="page-introduction">
-    <h2>
-        📚 Sobre este portal
-    </h2>
-    <p>
-        Este portal de la Zona Escolar 272 tiene como propósito
-        facilitar el acceso a materiales educativos, recursos
-        para docentes y directivos, estrategias de lectura y
-        escritura, evaluaciones, así como materiales
-        administrativos y normativos.
-    </p>
-    <p>
-        La información y los materiales serán incorporados
-        de manera gradual para apoyar las necesidades de las
-        escuelas y fortalecer el trabajo colaborativo de
-        nuestra comunidad educativa.
-    </p>
-</div>
-<!-- =====================================================
-     BUSCADOR
-===================================================== -->
-<div class="search-box">
-    <input
-        type="text"
-        id="buscador"
-        placeholder="🔎 Buscar un material..."
-        onkeyup="buscarMaterial()"
+
+<main class="main">
+
+
+    <!-- =================================================
+         INICIO / PRESENTACIÓN
+    ================================================== -->
+
+    <div
+        id="inicio"
+        class="inicio"
     >
-</div>
-<!-- =====================================================
-     MATERIAL DIDÁCTICO
-===================================================== -->
-<section id="material">
-    <h2>
-        📚 Material didáctico
-    </h2>
-    <div class="grid">
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Libros de lectura"
-                class="card-image"
-            >
-            <div class="icon">
-                📖
+
+
+        <div class="presentation">
+
+
+            <div class="presentation-content">
+
+
+                <img
+                    src="LOGO272.jfif"
+                    alt="Logo Zona Escolar 272"
+                    class="presentation-logo"
+                >
+
+
+                <h1>
+
+                    ZONA ESCOLAR 272
+
+                </h1>
+
+
+                <h2>
+
+                    Bienvenidos a nuestro espacio educativo
+
+                </h2>
+
+
+                <p>
+
+                    Un espacio destinado a compartir materiales,
+                    estrategias, experiencias y recursos que apoyen
+                    el trabajo educativo de las escuelas que integran
+                    nuestra Zona Escolar.
+
+                </p>
+
+
             </div>
-            <h3>
-                Libros de lectura
-            </h3>
-            <p>
-                Material de lectura disponible para
-                las escuelas de la Zona Escolar.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER LIBROS
-            </a>
+
+
         </div>
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Material imprimible"
-                class="card-image"
-            >
-            <div class="icon">
-                🖨️
+
+
+
+        <div class="container">
+
+
+            <div class="page-introduction">
+
+
+                <h2>
+
+                    📚 Sobre este portal
+
+                </h2>
+
+
+                <p>
+
+                    Este portal de la Zona Escolar 272 tiene como
+                    propósito facilitar el acceso a materiales
+                    educativos, recursos para docentes y directivos,
+                    estrategias de lectura y escritura, evaluaciones,
+                    así como materiales administrativos y normativos.
+
+                </p>
+
+
+                <p>
+
+                    La información y los materiales serán incorporados
+                    de manera gradual para apoyar las necesidades de
+                    las escuelas y fortalecer el trabajo colaborativo
+                    de nuestra comunidad educativa.
+
+                </p>
+
+
             </div>
-            <h3>
-                Material imprimible
-            </h3>
-            <p>
-                Actividades y recursos para trabajar
-                en el aula.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER MATERIAL
-            </a>
+
+
+
+            <div class="search-box">
+
+
+                <input
+                    type="text"
+                    id="buscadorInicio"
+                    placeholder="🔎 Buscar un material..."
+                    onkeyup="buscarInicio()"
+                >
+
+
+            </div>
+
+
         </div>
+
+
     </div>
-</section>
-<!-- =====================================================
-     CONSEJO TÉCNICO
-===================================================== -->
-<section id="consejo">
-    <h2>
-        📝 Consejo Técnico
-    </h2>
-    <div class="grid">
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Consejo Técnico"
-                class="card-image"
+
+
+
+    <!-- =================================================
+         MATERIAL DIDÁCTICO
+    ================================================== -->
+
+    <section
+        id="material"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
             >
-            <div class="icon">
-                📋
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                📚 Material didáctico
+
+            </h2>
+
+
+            <div class="search-box">
+
+
+                <input
+                    type="text"
+                    class="buscador-seccion"
+                    placeholder="🔎 Buscar en Material didáctico..."
+                    onkeyup="buscarEnSeccion(this,'material')"
+                >
+
+
             </div>
-            <h3>
-                Materiales y descargas
-            </h3>
-            <p>
-                Materiales, documentos y recursos para
-                las sesiones del Consejo Técnico Escolar.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER DESCARGAS
-            </a>
+
+
+            <div class="grid">
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Libros de lectura"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📖
+
+                    </div>
+
+
+                    <h3>
+
+                        Libros de lectura
+
+                    </h3>
+
+
+                    <p>
+
+                        Material de lectura disponible para
+                        las escuelas de la Zona Escolar.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER LIBROS
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Material imprimible"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        🖨️
+
+                    </div>
+
+
+                    <h3>
+
+                        Material imprimible
+
+                    </h3>
+
+
+                    <p>
+
+                        Actividades y recursos para trabajar
+                        en el aula.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER MATERIAL
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
         </div>
-        <div class="card">
-            <img
-                src="CTE%20SEP%201.jpeg"
-                alt="Consejo Técnico Escolar"
-                class="card-image"
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONSEJO TÉCNICO
+    ================================================== -->
+
+    <section
+        id="consejo"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
             >
-            <div class="icon">
-                📷
-            </div>
-            <h3>
-                Fotografías CTE SEP
-            </h3>
-            <p>
-                Galería de fotografías de las actividades
-                del Consejo Técnico Escolar.
-            </p>
-            <details>
-                <summary class="btn">
-                    VER FOTOGRAFÍAS
-                </summary>
-                <div class="fotos">
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                📝 Consejo Técnico
+
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Consejo Técnico"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📋
+
+                    </div>
+
+
+                    <h3>
+
+                        Materiales y descargas
+
+                    </h3>
+
+
+                    <p>
+
+                        Materiales, documentos y recursos para
+                        las sesiones del Consejo Técnico Escolar.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER DESCARGAS
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="card">
+
+
                     <img
                         src="CTE%20SEP%201.jpeg"
-                        alt="CTE SEP 1"
+                        alt="Consejo Técnico Escolar"
+                        class="card-image"
                     >
-                    <img
-                        src="CTE%20SEP%202.jpeg"
-                        alt="CTE SEP 2"
-                    >
-                    <img
-                        src="CTE%20SEP%203.jpeg"
-                        alt="CTE SEP 3"
-                    >
-                    <img
-                        src="CTE%20SEP%204.jpeg"
-                        alt="CTE SEP 4"
-                    >
+
+
+                    <div class="icon">
+
+                        📷
+
+                    </div>
+
+
+                    <h3>
+
+                        Fotografías CTE SEP
+
+                    </h3>
+
+
+                    <p>
+
+                        Galería de fotografías de las actividades
+                        del Consejo Técnico Escolar.
+
+                    </p>
+
+
+                    <details>
+
+
+                        <summary class="btn">
+
+                            VER FOTOGRAFÍAS
+
+                        </summary>
+
+
+                        <div class="fotos">
+
+
+                            <img
+                                src="CTE%20SEP%201.jpeg"
+                                alt="CTE SEP 1"
+                            >
+
+
+                            <img
+                                src="CTE%20SEP%202.jpeg"
+                                alt="CTE SEP 2"
+                            >
+
+
+                            <img
+                                src="CTE%20SEP%203.jpeg"
+                                alt="CTE SEP 3"
+                            >
+
+
+                            <img
+                                src="CTE%20SEP%204.jpeg"
+                                alt="CTE SEP 4"
+                            >
+
+
+                        </div>
+
+
+                    </details>
+
+
                 </div>
-            </details>
-        </div>
-    </div>
-</section>
-<!-- =====================================================
-     EXPERIENCIAS DOCENTES
-===================================================== -->
-<section id="experiencias">
-    <h2>
-        👩‍🏫 Experiencias docentes
-    </h2>
-    <div class="grid">
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Estrategias docentes"
-                class="card-image"
-            >
-            <div class="icon">
-                👩‍🏫
+
+
             </div>
-            <h3>
-                Estrategias docentes
-            </h3>
-            <p>
-                Experiencias y estrategias compartidas
-                por docentes de la Zona Escolar.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER ESTRATEGIAS
-            </a>
+
+
         </div>
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Estrategias para directores"
-                class="card-image"
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         EXPERIENCIAS
+    ================================================== -->
+
+    <section
+        id="experiencias"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
             >
-            <div class="icon">
-                👨‍💼
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                👩‍🏫 Experiencias docentes
+
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Estrategias docentes"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        👩‍🏫
+
+                    </div>
+
+
+                    <h3>
+
+                        Estrategias docentes
+
+                    </h3>
+
+
+                    <p>
+
+                        Experiencias y estrategias compartidas
+                        por docentes de la Zona Escolar.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER ESTRATEGIAS
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Estrategias para directores"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        👨‍💼
+
+                    </div>
+
+
+                    <h3>
+
+                        Estrategias para directores
+
+                    </h3>
+
+
+                    <p>
+
+                        Recursos, experiencias y estrategias
+                        para apoyar la función directiva.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER RECURSOS
+
+                    </a>
+
+
+                </div>
+
+
             </div>
-            <h3>
-                Estrategias para directores
-            </h3>
-            <p>
-                Recursos, experiencias y estrategias
-                para apoyar la función directiva.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER RECURSOS
-            </a>
+
+
         </div>
-    </div>
-</section>
-<!-- =====================================================
-     APOYO A LA LECTURA Y ESCRITURA
-===================================================== -->
-<section id="lectura">
-    <h2>
-        📖 Apoyo a la lectura y escritura
-    </h2>
-    <div class="grid">
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Centro de Maestros"
-                class="card-image"
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         LECTURA Y ESCRITURA
+    ================================================== -->
+
+    <section
+        id="lectura"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
             >
-            <div class="icon">
-                📚
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                📖 Apoyo a la lectura y escritura
+
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Centro de Maestros"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📚
+
+                    </div>
+
+
+                    <h3>
+
+                        Centro de Maestros
+
+                    </h3>
+
+
+                    <p>
+
+                        Recursos y materiales de apoyo para
+                        fortalecer los procesos de lectura
+                        y escritura.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER RECURSOS
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Estrategias de lectura"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📖
+
+                    </div>
+
+
+                    <h3>
+
+                        Estrategias de lectura
+
+                    </h3>
+
+
+                    <p>
+
+                        Actividades y estrategias para fomentar
+                        la lectura en los alumnos.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER ESTRATEGIAS
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Estrategias de escritura"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        ✍️
+
+                    </div>
+
+
+                    <h3>
+
+                        Estrategias de escritura
+
+                    </h3>
+
+
+                    <p>
+
+                        Materiales y actividades para fortalecer
+                        la producción escrita de los alumnos.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="#"
+                        target="_blank"
+                    >
+
+                        VER ESTRATEGIAS
+
+                    </a>
+
+
+                </div>
+
+
             </div>
-            <h3>
-                Centro de Maestros
-            </h3>
-            <p>
-                Recursos y materiales de apoyo para
-                fortalecer los procesos de lectura
-                y escritura.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER RECURSOS
-            </a>
+
+
         </div>
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Estrategias de lectura"
-                class="card-image"
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MATERIALES ADMINISTRATIVOS Y NORMATIVOS
+    ================================================== -->
+
+    <section
+        id="administrativos"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
             >
-            <div class="icon">
-                📖
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                📋 Materiales administrativos y normativos
+
+            </h2>
+
+
+            <div class="featured">
+
+
+                <h3>
+
+                    📌 Información para las escuelas
+
+                </h3>
+
+
+                <p>
+
+                    En este apartado se publicarán materiales,
+                    documentos, lineamientos, guías y recursos
+                    administrativos y normativos que sean compartidos
+                    por la Zona Escolar para apoyar la operatividad
+                    de las escuelas y la función directiva.
+
+                </p>
+
+
             </div>
-            <h3>
-                Estrategias de lectura
-            </h3>
-            <p>
-                Actividades y estrategias para fomentar
-                la lectura en los alumnos.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER ESTRATEGIAS
-            </a>
-        </div>
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Estrategias de escritura"
-                class="card-image"
-            >
-            <div class="icon">
-                ✍️
+
+
+
+            <div class="grid">
+
+
+                <!-- MATERIAL ADMINISTRATIVO -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Material administrativo"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📄
+
+                    </div>
+
+
+                    <h3>
+
+                        Material administrativo
+
+                    </h3>
+
+
+                    <p>
+
+                        Formatos, documentos y materiales necesarios
+                        para apoyar las actividades administrativas
+                        de las escuelas.
+
+                    </p>
+
+
+                    <div class="sub-buttons">
+
+
+                        <a
+                            href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendaci%C3%B3n%20AEFCM.pptx"
+                            target="_blank"
+                        >
+
+                            📊 Presentación CTE 272
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            📄 Formatos
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            📋 Documentos
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- MATERIAL NORMATIVO -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Material normativo"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        ⚖️
+
+                    </div>
+
+
+                    <h3>
+
+                        Material normativo
+
+                    </h3>
+
+
+                    <p>
+
+                        Reglamentos, lineamientos, acuerdos y demás
+                        disposiciones que orientan la operación
+                        de las escuelas.
+
+                    </p>
+
+
+                    <div class="sub-buttons">
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            ⚖️ Normatividad
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            📘 Lineamientos
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- GUÍAS OPERATIVAS -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Guías operativas"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📘
+
+                    </div>
+
+
+                    <h3>
+
+                        Guías operativas
+
+                    </h3>
+
+
+                    <p>
+
+                        Guías y documentos de consulta para
+                        apoyar la operación de las escuelas.
+
+                    </p>
+
+
+                    <a
+                        class="btn"
+                        href="guia-operativa-2025-2026.pdf"
+                        target="_blank"
+                    >
+
+                        GUÍA OPERATIVA 2025-2026
+
+                    </a>
+
+
+                </div>
+
+
             </div>
-            <h3>
-                Estrategias de escritura
-            </h3>
-            <p>
-                Materiales y actividades para fortalecer
-                la producción escrita de los alumnos.
-            </p>
-            <a
-                class="btn"
-                href="#"
-                target="_blank"
-            >
-                VER ESTRATEGIAS
-            </a>
+
+
         </div>
-    </div>
-</section>
-<!-- =====================================================
-     MATERIALES ADMINISTRATIVOS Y NORMATIVOS
-===================================================== -->
-<section id="administrativos">
-    <h2>
-        📋 Materiales administrativos y normativos
-    </h2>
-    <div class="featured">
-        <h3>
-            📌 Información para las escuelas
-        </h3>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         EVALUACIONES
+    ================================================== -->
+
+    <section
+        id="evaluaciones"
+        class="content-section"
+    >
+
+
+        <div class="container">
+
+
+            <button
+                class="back-home"
+                onclick="mostrarInicio()"
+            >
+
+                ← Volver al inicio
+
+            </button>
+
+
+            <h2>
+
+                📊 Avance y Evaluaciones
+
+            </h2>
+
+
+            <div class="grid">
+
+
+                <!-- DIAGNÓSTICO -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Evaluación diagnóstica"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        🔎
+
+                    </div>
+
+
+                    <h3>
+
+                        Diagnóstico
+
+                    </h3>
+
+
+                    <p>
+
+                        Instrumentos y materiales para
+                        la evaluación diagnóstica.
+
+                    </p>
+
+
+                    <div class="sub-buttons">
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            📖 Lectura
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            ✍️ Escritura
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            💻 TIC
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- NOVIEMBRE -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Evaluación noviembre"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📝
+
+                    </div>
+
+
+                    <h3>
+
+                        Noviembre
+
+                    </h3>
+
+
+                    <p>
+
+                        Material correspondiente al seguimiento
+                        y evaluación de noviembre.
+
+                    </p>
+
+
+                    <div class="sub-buttons">
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            🔤 Grafías
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- JUNIO -->
+
+                <div class="card">
+
+
+                    <img
+                        src="LOGO272.jfif"
+                        alt="Evaluación junio"
+                        class="card-image"
+                    >
+
+
+                    <div class="icon">
+
+                        📅
+
+                    </div>
+
+
+                    <h3>
+
+                        Junio
+
+                    </h3>
+
+
+                    <p>
+
+                        Material para la evaluación y cierre
+                        del ciclo escolar.
+
+                    </p>
+
+
+                    <div class="sub-buttons">
+
+
+                        <a
+                            href="#"
+                            target="_blank"
+                        >
+
+                            📊 Evaluación de cierre
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         PIE DE PÁGINA
+    ================================================== -->
+
+    <footer>
+
+
         <p>
-            En este apartado se publicarán materiales,
-            documentos, lineamientos, guías y recursos
-            administrativos y normativos que sean compartidos
-            por la Zona Escolar para apoyar la operatividad
-            de las escuelas y la función directiva.
+
+            <strong>
+
+                Zona Escolar 272
+
+            </strong>
+
         </p>
-    </div>
-    <div class="grid">
-        <!-- MATERIAL ADMINISTRATIVO -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Material administrativo"
-                class="card-image"
-            >
-            <div class="icon">
-                📄
-            </div>
-            <h3>
-                Material administrativo
-            </h3>
-            <p>
-                Formatos, documentos y materiales necesarios
-                para apoyar las actividades administrativas
-                de las escuelas.
-            </p>
-            <div class="sub-buttons">
 
-<a
-    href="PRESENTACIÓN CTE 272- Recomendacion AEFCM.pptx"
-    target="_blank"
->
-    📊 Presentación CTE 272
-</a>
 
-    <a
-        href="#"
-        target="_blank"
-    >
-        📄 Formatos
-    </a>
+        <p>
 
-    <a
-        href="#"
-        target="_blank"
-    >
-        📋 Documentos
-    </a>
+            Portal de materiales, estrategias,
+            experiencias y recursos educativos
 
-</div>
-        </div>
-        <!-- MATERIAL NORMATIVO -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Material normativo"
-                class="card-image"
-            >
-            <div class="icon">
-                ⚖️
-            </div>
-            <h3>
-                Material normativo
-            </h3>
-            <p>
-                Reglamentos, lineamientos, acuerdos y demás
-                disposiciones que orientan la operación
-                de las escuelas.
-            </p>
-            <div class="sub-buttons">
-                <a href="#" target="_blank">
-                    ⚖️ Normatividad
-                </a>
-                <a href="#" target="_blank">
-                    📘 Lineamientos
-                </a>
-            </div>
-        </div>
-        <!-- GUÍAS OPERATIVAS -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Guías operativas"
-                class="card-image"
-            >
-            <div class="icon">
-                📘
-            </div>
-            <h3>
-                Guías operativas
-            </h3>
-            <p>
-                Guías y documentos de consulta para
-                apoyar la operación de las escuelas.
-            </p>
-            <a
-                class="btn"
-                href="guia-operativa-2025-2026.pdf"
-                target="_blank"
-            >
-                GUÍA OPERATIVA 2025-2026
-            </a>
-        </div>
-    </div>
-</section>
-<!-- =====================================================
-     AVANCE Y EVALUACIONES
-===================================================== -->
-<section id="evaluaciones">
-    <h2>
-        📊 Avance y Evaluaciones
-    </h2>
-    <div class="grid">
-        <!-- DIAGNÓSTICO -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Evaluación diagnóstica"
-                class="card-image"
-            >
-            <div class="icon">
-                🔎
-            </div>
-            <h3>
-                Diagnóstico
-            </h3>
-            <p>
-                Instrumentos y materiales para
-                la evaluación diagnóstica.
-            </p>
-            <div class="sub-buttons">
-                <a href="#" target="_blank">
-                    📖 Lectura
-                </a>
-                <a href="#" target="_blank">
-                    ✍️ Escritura
-                </a>
-                <a href="#" target="_blank">
-                    💻 TIC
-                </a>
-            </div>
-        </div>
-        <!-- NOVIEMBRE -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Evaluación noviembre"
-                class="card-image"
-            >
-            <div class="icon">
-                📝
-            </div>
-            <h3>
-                Noviembre
-            </h3>
-            <p>
-                Material correspondiente al seguimiento
-                y evaluación de noviembre.
-            </p>
-            <div class="sub-buttons">
-                <a href="#" target="_blank">
-                    🔤 Grafías
-                </a>
-            </div>
-        </div>
-        <!-- JUNIO -->
-        <div class="card">
-            <img
-                src="LOGO272.jfif"
-                alt="Evaluación junio"
-                class="card-image"
-            >
-            <div class="icon">
-                📅
-            </div>
-            <h3>
-                Junio
-            </h3>
-            <p>
-                Material para la evaluación y cierre
-                del ciclo escolar.
-            </p>
-            <div class="sub-buttons">
-                <a href="#" target="_blank">
-                    📊 Evaluación de cierre
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-</div>
-<!-- =====================================================
-     PIE DE PÁGINA
-===================================================== -->
-<footer>
-    <p>
-        <strong>
-            Zona Escolar 272
-        </strong>
-    </p>
-    <p>
-        Portal de materiales, estrategias,
-        experiencias y recursos educativos
-    </p>
-    <p>
-        Ciclo Escolar 2026–2027
-    </p>
-</footer>
+        </p>
+
+
+        <p>
+
+            Ciclo Escolar 2026–2027
+
+        </p>
+
+
+    </footer>
+
+
 </main>
+
+
+
 <!-- =====================================================
      JAVASCRIPT
 ===================================================== -->
+
 <script>
+
+
 /* =====================================================
-   ABRIR / CERRAR MENÚ
+   ABRIR / CERRAR MENÚ EN CELULAR
 ===================================================== */
+
 function toggleMenu(){
+
     const sidebar =
         document.getElementById("sidebar");
+
     const overlay =
         document.getElementById("overlay");
+
+
     sidebar.classList.toggle("open");
+
     overlay.classList.toggle("show");
+
 }
+
+
+
 /* =====================================================
-   ABRIR SUBMENÚ
+   ABRIR / CERRAR SUBMENÚ
 ===================================================== */
+
 function toggleSubmenu(button){
+
     const item =
         button.parentElement;
+
+
     item.classList.toggle("active");
+
 }
+
+
+
 /* =====================================================
-   IR AL INICIO
+   MOSTRAR UNA SECCIÓN
 ===================================================== */
-function irA(id){
+
+function mostrarSeccion(id){
+
+    /* Ocultar inicio */
+
     document
-        .getElementById(id)
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-    if(window.innerWidth <= 800){
-        toggleMenu();
+        .getElementById("inicio")
+        .style.display="none";
+
+
+    /* Ocultar todas las secciones */
+
+    const secciones =
+        document.querySelectorAll(
+            ".content-section"
+        );
+
+
+    secciones.forEach(function(seccion){
+
+        seccion.classList.remove("active");
+
+    });
+
+
+    /* Mostrar sección seleccionada */
+
+    const seleccionada =
+        document.getElementById(id);
+
+
+    if(seleccionada){
+
+        seleccionada.classList.add("active");
+
     }
+
+
+    /* Ir arriba */
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+    /* Cerrar menú en celular */
+
+    if(window.innerWidth <= 800){
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        const overlay =
+            document.getElementById("overlay");
+
+
+        sidebar.classList.remove("open");
+
+        overlay.classList.remove("show");
+
+    }
+
 }
+
+
+
 /* =====================================================
-   BUSCADOR
+   MOSTRAR INICIO
 ===================================================== */
-function buscarMaterial(){
+
+function mostrarInicio(){
+
+    /* Mostrar inicio */
+
+    document
+        .getElementById("inicio")
+        .style.display="block";
+
+
+    /* Ocultar secciones */
+
+    const secciones =
+        document.querySelectorAll(
+            ".content-section"
+        );
+
+
+    secciones.forEach(function(seccion){
+
+        seccion.classList.remove("active");
+
+    });
+
+
+    /* Ir arriba */
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+    /* Cerrar menú */
+
+    if(window.innerWidth <= 800){
+
+        const sidebar =
+            document.getElementById("sidebar");
+
+        const overlay =
+            document.getElementById("overlay");
+
+
+        sidebar.classList.remove("open");
+
+        overlay.classList.remove("show");
+
+    }
+
+}
+
+
+
+/* =====================================================
+   BUSCADOR DEL INICIO
+===================================================== */
+
+function buscarInicio(){
+
     let texto =
         document
-        .getElementById("buscador")
+        .getElementById("buscadorInicio")
         .value
         .toLowerCase();
-    let tarjetas =
-        document.querySelectorAll(".card");
+
+
+    const secciones =
+        document.querySelectorAll(
+            ".content-section"
+        );
+
+
+    if(texto.trim()===""){
+
+        return;
+
+    }
+
+
+    let encontrada=false;
+
+
+    secciones.forEach(function(seccion){
+
+        const contenido =
+            seccion.innerText.toLowerCase();
+
+
+        if(
+            contenido.includes(texto)
+            &&
+            !encontrada
+        ){
+
+            mostrarSeccion(
+                seccion.id
+            );
+
+            encontrada=true;
+
+        }
+
+    });
+
+}
+
+
+
+/* =====================================================
+   BUSCADOR DENTRO DE UNA SECCIÓN
+===================================================== */
+
+function buscarEnSeccion(input,id){
+
+    let texto =
+        input.value.toLowerCase();
+
+
+    const seccion =
+        document.getElementById(id);
+
+
+    const tarjetas =
+        seccion.querySelectorAll(
+            ".card"
+        );
+
+
     tarjetas.forEach(function(tarjeta){
+
         let contenido =
             tarjeta.innerText.toLowerCase();
-        if(contenido.includes(texto)){
+
+
+        if(
+            contenido.includes(texto)
+        ){
+
             tarjeta.style.display="block";
+
         }else{
+
             tarjeta.style.display="none";
+
         }
+
     });
+
 }
-/* =====================================================
-   CERRAR MENÚ EN CELULAR
-===================================================== */
-document
-.querySelectorAll(".submenu a")
-.forEach(function(enlace){
-    enlace.addEventListener(
-        "click",
-        function(){
-            if(window.innerWidth <= 800){
-                toggleMenu();
-            }
-        }
-    );
-});
+
 </script>
+
+
 </body>
+
 </html>
