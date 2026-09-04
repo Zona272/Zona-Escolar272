@@ -566,7 +566,6 @@ body{
 /* =====================================================
    SECCIONES
 
-   IMPORTANTE:
    TODAS ESTÁN OCULTAS.
    SOLO SE MUESTRA LA QUE ESTÉ ACTIVA.
 ===================================================== */
@@ -726,6 +725,73 @@ body{
 
 
 /* =====================================================
+   BOTONES VER Y DESCARGAR
+===================================================== */
+
+.document-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-top:15px;
+
+}
+
+
+.document-buttons .btn{
+
+    margin-top:0;
+
+}
+
+
+.btn-download{
+
+    background:#2e7d32;
+
+}
+
+
+.btn-download:hover{
+
+    background:#1b5e20;
+
+}
+
+
+/* =====================================================
+   DOCUMENTOS
+===================================================== */
+
+.documento{
+
+    background:#ffffff;
+
+    border:
+        1px solid #d5e7ef;
+
+    border-radius:10px;
+
+    padding:15px;
+
+}
+
+
+.documento strong{
+
+    display:block;
+
+    color:#174f73;
+
+    line-height:1.4;
+
+}
+
+
+/* =====================================================
    SUBCATEGORÍAS
 ===================================================== */
 
@@ -743,7 +809,7 @@ body{
 }
 
 
-.sub-buttons a{
+.sub-buttons > a{
 
     display:block;
 
@@ -767,7 +833,7 @@ body{
 }
 
 
-.sub-buttons a:hover{
+.sub-buttons > a:hover{
 
     background:#dceff7;
 
@@ -1036,6 +1102,22 @@ footer p{
 
         grid-template-columns:
             1fr 1fr;
+
+    }
+
+
+    .document-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .document-buttons .btn{
+
+        width:100%;
+
+        text-align:center;
 
     }
 
@@ -1762,15 +1844,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER LIBROS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER LIBROS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -1809,15 +1906,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER MATERIAL
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER MATERIAL
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -1898,15 +2010,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER DESCARGAS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER DESCARGAS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2066,15 +2193,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER ESTRATEGIAS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER ESTRATEGIAS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2113,15 +2255,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER RECURSOS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER RECURSOS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2203,15 +2360,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER RECURSOS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER RECURSOS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2250,15 +2422,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER ESTRATEGIAS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER ESTRATEGIAS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2297,15 +2484,30 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="#"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        VER ESTRATEGIAS
+                        <a
+                            class="btn"
+                            href="#"
+                            target="_blank"
+                        >
 
-                    </a>
+                            📖 VER ESTRATEGIAS
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="#"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+                    </div>
 
 
                 </div>
@@ -2417,34 +2619,129 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <a
-                            href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendaci%C3%B3n%20AEFCM.pptx"
-                            target="_blank"
-                        >
-
-                            📊 Presentación CTE 272
-
-                        </a>
+                        <div class="documento">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                            <strong>
 
-                            📄 Formatos
+                                📊 Presentación CTE 272
 
-                        </a>
+                            </strong>
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                            <div class="document-buttons">
 
-                            📋 Documentos
 
-                        </a>
+                                <a
+                                    href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendaci%C3%B3n%20AEFCM.pptx"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="PRESENTACI%C3%93N%20CTE%20272-%20Recomendaci%C3%B3n%20AEFCM.pptx"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="documento">
+
+
+                            <strong>
+
+                                📄 Formatos
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="documento">
+
+
+                            <strong>
+
+                                📋 Documentos
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -2492,24 +2789,87 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
-
-                            ⚖️ Normatividad
-
-                        </a>
+                        <div class="documento">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                            <strong>
 
-                            📘 Lineamientos
+                                ⚖️ Normatividad
 
-                        </a>
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="documento">
+
+
+                            <strong>
+
+                                📘 Lineamientos
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -2553,15 +2913,32 @@ footer p{
                     </p>
 
 
-                    <a
-                        class="btn"
-                        href="guia-operativa-2025-2026.pdf"
-                        target="_blank"
-                    >
+                    <div class="document-buttons">
 
-                        GUÍA OPERATIVA 2025-2026
 
-                    </a>
+                        <a
+                            class="btn"
+                            href="guia-operativa-2025-2026.pdf"
+                            target="_blank"
+                        >
+
+                            📖 VER GUÍA
+
+                        </a>
+
+
+                        <a
+                            class="btn btn-download"
+                            href="guia-operativa-2025-2026.pdf"
+                            download
+                        >
+
+                            ⬇️ DESCARGAR
+
+                        </a>
+
+
+                    </div>
 
 
                 </div>
@@ -2647,34 +3024,129 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
-
-                            📖 Lectura
-
-                        </a>
+                        <div class="documento">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                            <strong>
 
-                            ✍️ Escritura
+                                📖 Lectura
 
-                        </a>
+                            </strong>
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                            <div class="document-buttons">
 
-                            💻 TIC
 
-                        </a>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="documento">
+
+
+                            <strong>
+
+                                ✍️ Escritura
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="documento">
+
+
+                            <strong>
+
+                                💻 TIC
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -2721,14 +3193,45 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                        <div class="documento">
 
-                            🔤 Grafías
 
-                        </a>
+                            <strong>
+
+                                🔤 Grafías
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
@@ -2775,14 +3278,45 @@ footer p{
                     <div class="sub-buttons">
 
 
-                        <a
-                            href="#"
-                            target="_blank"
-                        >
+                        <div class="documento">
 
-                            📊 Evaluación de cierre
 
-                        </a>
+                            <strong>
+
+                                📊 Evaluación de cierre
+
+                            </strong>
+
+
+                            <div class="document-buttons">
+
+
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    class="btn"
+                                >
+
+                                    📖 VER
+
+                                </a>
+
+
+                                <a
+                                    href="#"
+                                    download
+                                    class="btn btn-download"
+                                >
+
+                                    ⬇️ DESCARGAR
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
 
 
                     </div>
