@@ -386,7 +386,7 @@ body{
 
 
 /* =====================================================
-   IMÁGENES
+   IMÁGENES DE TARJETAS
 ===================================================== */
 
 .card-image{
@@ -496,7 +496,7 @@ body{
 
 
 /* =====================================================
-   FOTOGRAFÍAS
+   FOTOGRAFÍAS CTE
 ===================================================== */
 
 details{
@@ -526,6 +526,103 @@ details summary::-webkit-details-marker{
     border-radius:10px;
     display:block;
     box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   EVIDENCIA FOTOGRÁFICA
+===================================================== */
+
+.evidencia-grupo{
+    background:#ffffff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.10);
+}
+
+.evidencia-grupo h3{
+    color:#174f73;
+    margin-top:0;
+    margin-bottom:20px;
+    border-bottom:2px solid #1976a8;
+    padding-bottom:10px;
+}
+
+.evidencia-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.evidencia-item{
+    background:#f8fafc;
+    border-radius:12px;
+    padding:10px;
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
+    transition:.2s;
+}
+
+.evidencia-item:hover{
+    transform:translateY(-3px);
+    box-shadow:0 7px 18px rgba(0,0,0,.15);
+}
+
+.evidencia-item img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:9px;
+    display:block;
+}
+
+.evidencia-item p{
+    text-align:center;
+    color:#174f73;
+    font-size:13px;
+    font-weight:bold;
+    line-height:1.4;
+    margin:10px 5px 5px;
+}
+
+
+/* =====================================================
+   ETIQUETA
+===================================================== */
+
+.etiqueta{
+    display:inline-block;
+    background:#123b5d;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+
+/* =====================================================
+   DOCUMENTOS DESTACADOS
+===================================================== */
+
+.documento-destacado{
+    background:linear-gradient(
+        135deg,
+        #eef6fa,
+        #ffffff
+    );
+    border:2px solid #d5e7ef;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:12px;
+}
+
+.documento-destacado strong{
+    color:#174f73;
+    font-size:15px;
+    display:block;
+    margin-bottom:8px;
 }
 
 
@@ -615,7 +712,12 @@ footer p{
         grid-template-columns:1fr 1fr;
     }
 
+    .evidencia-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
 }
+
 
 @media(max-width:450px){
 
@@ -631,46 +733,14 @@ footer p{
         grid-template-columns:1fr;
     }
 
-}
+    .evidencia-grid{
+        grid-template-columns:1fr;
+    }
 
+    .evidencia-item img{
+        height:auto;
+    }
 
-/* =====================================================
-   DOCUMENTOS DESTACADOS
-===================================================== */
-
-.documento-destacado{
-    background:linear-gradient(
-        135deg,
-        #eef6fa,
-        #ffffff
-    );
-    border:2px solid #d5e7ef;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:12px;
-}
-
-.documento-destacado strong{
-    color:#174f73;
-    font-size:15px;
-    display:block;
-    margin-bottom:8px;
-}
-
-
-/* =====================================================
-   ETIQUETA CTE
-===================================================== */
-
-.etiqueta{
-    display:inline-block;
-    background:#123b5d;
-    color:white;
-    padding:5px 10px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:bold;
-    margin-bottom:10px;
 }
 
 </style>
@@ -732,7 +802,9 @@ footer p{
     </div>
 
 
-    <!-- INICIO -->
+    <!-- =================================================
+         INICIO
+    ================================================== -->
 
     <div class="menu-item">
 
@@ -794,7 +866,29 @@ footer p{
     </div>
 
 
-    <!-- EXPERIENCIAS -->
+    <!-- =================================================
+         EVIDENCIA FOTOGRÁFICA
+    ================================================== -->
+
+    <div class="menu-item">
+
+        <button
+            class="menu-title"
+            onclick="mostrarSeccion('evidencia')"
+        >
+
+            <span>
+                📸 Evidencia fotográfica
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         EXPERIENCIAS
+    ================================================== -->
 
     <div class="menu-item">
 
@@ -828,7 +922,9 @@ footer p{
     </div>
 
 
-    <!-- LECTURA Y ESCRITURA -->
+    <!-- =================================================
+         LECTURA Y ESCRITURA
+    ================================================== -->
 
     <div class="menu-item">
 
@@ -874,7 +970,9 @@ footer p{
     </div>
 
 
-    <!-- ADMINISTRATIVOS Y NORMATIVOS -->
+    <!-- =================================================
+         ADMINISTRATIVOS Y NORMATIVOS
+    ================================================== -->
 
     <div class="menu-item">
 
@@ -912,7 +1010,9 @@ footer p{
     </div>
 
 
-    <!-- EVALUACIONES -->
+    <!-- =================================================
+         EVALUACIONES
+    ================================================== -->
 
     <div class="menu-item">
 
@@ -1087,7 +1187,10 @@ footer p{
 
         <div class="grid">
 
-            <!-- RECOMENDACIONES AEFCM -->
+
+            <!-- =================================================
+                 RECOMENDACIONES AEFCM
+            ================================================== -->
 
             <div class="card">
 
@@ -1134,7 +1237,9 @@ footer p{
             </div>
 
 
-            <!-- MATERIALES Y DESCARGAS -->
+            <!-- =================================================
+                 MATERIALES Y DESCARGAS
+            ================================================== -->
 
             <div class="card">
 
@@ -1178,7 +1283,9 @@ footer p{
             </div>
 
 
-            <!-- FOTOGRAFÍAS CTE -->
+            <!-- =================================================
+                 FOTOGRAFÍAS CTE
+            ================================================== -->
 
             <div class="card">
 
@@ -1232,6 +1339,248 @@ footer p{
                     </div>
 
                 </details>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EVIDENCIA FOTOGRÁFICA
+===================================================== -->
+
+<section
+    id="evidencia"
+    class="content-section"
+>
+
+    <div class="container">
+
+        <button
+            class="back-home"
+            onclick="mostrarInicio()"
+        >
+            ← Volver al inicio
+        </button>
+
+
+        <h2>
+            📸 Evidencia fotográfica
+        </h2>
+
+
+        <div class="featured">
+
+            <span class="etiqueta">
+                JORNADA DE CONCIENTIZACIÓN
+            </span>
+
+            <h3>
+                📷 Evidencia fotográfica
+            </h3>
+
+            <p>
+                Evidencia fotográfica de las Jornadas de
+                Concientización realizadas en las escuelas
+                de la Zona Escolar 272.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             JUAN JACOBO ROUSSEAU
+        ================================================== -->
+
+        <div class="evidencia-grupo">
+
+            <h3>
+                🏫 Jornada de Concientización
+                Jun Jacobo Rousseau
+            </h3>
+
+
+            <div class="evidencia-grid">
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Jun%20Jacobo%20Rousseau%20001.jpeg"
+                        alt="Jornada de Concientización Jun Jacobo Rousseau 001"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Jun Jacobo Rousseau 001
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Jun%20Jacobo%20Rousseau%20002.jpeg"
+                        alt="Jornada de Concientización Jun Jacobo Rousseau 002"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Jun Jacobo Rousseau 002
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Jun%20Jacobo%20Rousseau%20003.jpeg"
+                        alt="Jornada de Concientización Jun Jacobo Rousseau 003"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Jun Jacobo Rousseau 003
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LA PRADERA MATUTINA
+        ================================================== -->
+
+        <div class="evidencia-grupo">
+
+            <h3>
+                🏫 Jornada de Concientización
+                La Pradera Matutina
+            </h3>
+
+
+            <div class="evidencia-grid">
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20La%20Pradera%20Mat%20001.jpeg"
+                        alt="Jornada de Concientización La Pradera Mat 001"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        La Pradera Mat 001
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20La%20Pradera%20Mat%20002.jpeg"
+                        alt="Jornada de Concientización La Pradera Mat 002"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        La Pradera Mat 002
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20La%20Pradera%20Mat%20003.jpeg"
+                        alt="Jornada de Concientización La Pradera Mat 003"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        La Pradera Mat 003
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             PROF. ENRIQUE VÁZQUEZ ISLAS
+        ================================================== -->
+
+        <div class="evidencia-grupo">
+
+            <h3>
+                🏫 Jornada de Concientización
+                Prof. Enrique Vázquez Islas
+            </h3>
+
+
+            <div class="evidencia-grid">
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Profr.%20Enrique%20Vazquez%20Islas%20001.jpeg"
+                        alt="Jornada de Concientización Prof. Enrique Vázquez Islas 001"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Prof. Enrique Vázquez Islas 001
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Profr.%20Enrique%20Vazquez%20Islas%20002.jpeg"
+                        alt="Jornada de Concientización Prof. Enrique Vázquez Islas 002"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Prof. Enrique Vázquez Islas 002
+                    </p>
+
+                </div>
+
+
+                <div class="evidencia-item">
+
+                    <img
+                        src="Jornada%20de%20Concientizaci%C3%B3n%20Profr.%20Enrique%20Vazquez%20Islas%20003.jpeg"
+                        alt="Jornada de Concientización Prof. Enrique Vázquez Islas 003"
+                    >
+
+                    <p>
+                        Jornada de Concientización
+                        Prof. Enrique Vázquez Islas 003
+                    </p>
+
+                </div>
+
 
             </div>
 
@@ -1456,8 +1805,6 @@ footer p{
                 <div class="sub-buttons">
 
 
-                    <!-- 2° -->
-
                     <div class="documento">
 
                         <strong>
@@ -1486,8 +1833,6 @@ footer p{
 
                     </div>
 
-
-                    <!-- 3° -->
 
                     <div class="documento">
 
@@ -1518,8 +1863,6 @@ footer p{
                     </div>
 
 
-                    <!-- 4° -->
-
                     <div class="documento">
 
                         <strong>
@@ -1549,8 +1892,6 @@ footer p{
                     </div>
 
 
-                    <!-- 5° -->
-
                     <div class="documento">
 
                         <strong>
@@ -1579,8 +1920,6 @@ footer p{
 
                     </div>
 
-
-                    <!-- 6° -->
 
                     <div class="documento">
 
@@ -2286,7 +2625,7 @@ footer p{
 
 
 <!-- =====================================================
-     PIE
+     PIE DE PÁGINA
 ===================================================== -->
 
 <footer>
