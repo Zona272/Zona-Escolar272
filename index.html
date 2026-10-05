@@ -496,97 +496,6 @@ body{
 
 
 /* =====================================================
-   FOTOGRAFÍAS CTE
-===================================================== */
-
-details{
-    margin-top:15px;
-}
-
-details summary{
-    cursor:pointer;
-    list-style:none;
-    display:inline-block;
-}
-
-details summary::-webkit-details-marker{
-    display:none;
-}
-
-.fotos{
-    margin-top:20px;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-}
-
-.fotos img{
-    width:100%;
-    height:auto;
-    border-radius:10px;
-    display:block;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-
-/* =====================================================
-   EVIDENCIA FOTOGRÁFICA
-===================================================== */
-
-.evidencia-grupo{
-    background:#ffffff;
-    border-radius:15px;
-    padding:25px;
-    margin-bottom:30px;
-    box-shadow:0 4px 15px rgba(0,0,0,.10);
-}
-
-.evidencia-grupo h3{
-    color:#174f73;
-    margin-top:0;
-    margin-bottom:20px;
-    border-bottom:2px solid #1976a8;
-    padding-bottom:10px;
-}
-
-.evidencia-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.evidencia-item{
-    background:#f8fafc;
-    border-radius:12px;
-    padding:10px;
-    box-shadow:0 3px 10px rgba(0,0,0,.10);
-    transition:.2s;
-}
-
-.evidencia-item:hover{
-    transform:translateY(-3px);
-    box-shadow:0 7px 18px rgba(0,0,0,.15);
-}
-
-.evidencia-item img{
-    width:100%;
-    height:210px;
-    object-fit:cover;
-    border-radius:9px;
-    display:block;
-}
-
-.evidencia-item p{
-    text-align:center;
-    color:#174f73;
-    font-size:13px;
-    font-weight:bold;
-    line-height:1.4;
-    margin:10px 5px 5px;
-}
-
-
-/* =====================================================
    ETIQUETA
 ===================================================== */
 
@@ -599,30 +508,6 @@ details summary::-webkit-details-marker{
     font-size:11px;
     font-weight:bold;
     margin-bottom:10px;
-}
-
-
-/* =====================================================
-   DOCUMENTOS DESTACADOS
-===================================================== */
-
-.documento-destacado{
-    background:linear-gradient(
-        135deg,
-        #eef6fa,
-        #ffffff
-    );
-    border:2px solid #d5e7ef;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:12px;
-}
-
-.documento-destacado strong{
-    color:#174f73;
-    font-size:15px;
-    display:block;
-    margin-bottom:8px;
 }
 
 
@@ -708,14 +593,6 @@ footer p{
         padding:25px 15px;
     }
 
-    .fotos{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .evidencia-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
 }
 
 
@@ -727,18 +604,6 @@ footer p{
 
     .presentation p{
         font-size:15px;
-    }
-
-    .fotos{
-        grid-template-columns:1fr;
-    }
-
-    .evidencia-grid{
-        grid-template-columns:1fr;
-    }
-
-    .evidencia-item img{
-        height:auto;
     }
 
 }
@@ -846,19 +711,11 @@ footer p{
         <div class="submenu">
 
             <a onclick="mostrarSeccion('consejo')">
-                📋 Descargas
-            </a>
-
-            <a onclick="mostrarSeccion('consejo')">
                 📅 Sesiones CTE
             </a>
 
             <a onclick="mostrarSeccion('consejo')">
                 📌 Presentación CTE Recomendación AEFCM.pdf
-            </a>
-
-            <a onclick="mostrarSeccion('consejo')">
-                📷 Fotografías
             </a>
 
         </div>
@@ -894,30 +751,14 @@ footer p{
 
         <button
             class="menu-title"
-            onclick="toggleSubmenu(this)"
+            onclick="mostrarSeccion('experiencias')"
         >
 
             <span>
                 👩‍🏫 Experiencias
             </span>
 
-            <span class="arrow">
-                ›
-            </span>
-
         </button>
-
-        <div class="submenu">
-
-            <a onclick="mostrarSeccion('experiencias')">
-                👩‍🏫 Estrategias docentes
-            </a>
-
-            <a onclick="mostrarSeccion('experiencias')">
-                👨‍💼 Estrategias para directores
-            </a>
-
-        </div>
 
     </div>
 
@@ -946,23 +787,7 @@ footer p{
         <div class="submenu">
 
             <a onclick="mostrarSeccion('lectura')">
-                📚 Centro de Maestros
-            </a>
-
-            <a onclick="mostrarSeccion('lectura')">
                 📖 Ficheros de español
-            </a>
-
-            <a onclick="mostrarSeccion('lectura')">
-                ✍️ Estrategias de escritura
-            </a>
-
-            <a onclick="mostrarSeccion('lectura')">
-                📘 Formulación Del Programa Analítico
-            </a>
-
-            <a onclick="mostrarSeccion('lectura')">
-                📋 Organización de las sesiones de trabajo
             </a>
 
         </div>
@@ -1003,46 +828,6 @@ footer p{
 
             <a onclick="mostrarSeccion('administrativos')">
                 📘 Guías operativas
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- =================================================
-         EVALUACIONES
-    ================================================== -->
-
-    <div class="menu-item">
-
-        <button
-            class="menu-title"
-            onclick="toggleSubmenu(this)"
-        >
-
-            <span>
-                📊 Avance y evaluaciones
-            </span>
-
-            <span class="arrow">
-                ›
-            </span>
-
-        </button>
-
-        <div class="submenu">
-
-            <a onclick="mostrarSeccion('evaluaciones')">
-                🔎 Diagnóstico
-            </a>
-
-            <a onclick="mostrarSeccion('evaluaciones')">
-                📝 Noviembre
-            </a>
-
-            <a onclick="mostrarSeccion('evaluaciones')">
-                📅 Junio
             </a>
 
         </div>
@@ -1113,8 +898,7 @@ footer p{
                 Este portal de la Zona Escolar 272 tiene como
                 propósito facilitar el acceso a materiales
                 educativos, recursos para docentes y directivos,
-                estrategias de lectura y escritura, evaluaciones,
-                así como materiales administrativos y normativos.
+                materiales administrativos y normativos.
             </p>
 
             <p>
@@ -1173,13 +957,13 @@ footer p{
             </span>
 
             <h3>
-                📚 Materiales para el CTE
+                📚 Consejo Técnico Escolar
             </h3>
 
             <p>
-                En este apartado se concentran los materiales,
-                presentaciones, recomendaciones y fotografías
-                correspondientes al Consejo Técnico Escolar.
+                En este apartado se encuentra la información
+                relacionada con las sesiones del Consejo Técnico
+                Escolar y los materiales de referencia de la AEFCM.
             </p>
 
         </div>
@@ -1238,28 +1022,28 @@ footer p{
 
 
             <!-- =================================================
-                 MATERIALES Y DESCARGAS
+                 SESIONES CTE
             ================================================== -->
 
             <div class="card">
 
                 <img
                     src="LOGO272.jfif"
-                    alt="Consejo Técnico"
+                    alt="Sesiones del Consejo Técnico"
                     class="card-image"
                 >
 
                 <div class="icon">
-                    📋
+                    📅
                 </div>
 
                 <h3>
-                    Materiales y descargas
+                    Sesiones CTE
                 </h3>
 
                 <p>
-                    Materiales, documentos y recursos para
-                    las sesiones del Consejo Técnico Escolar.
+                    Información y materiales correspondientes
+                    a las sesiones del Consejo Técnico Escolar.
                 </p>
 
                 <div class="document-buttons">
@@ -1271,74 +1055,7 @@ footer p{
                         📖 VER
                     </a>
 
-                    <a
-                        class="btn btn-download"
-                        href="#"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
                 </div>
-
-            </div>
-
-
-            <!-- =================================================
-                 FOTOGRAFÍAS CTE
-            ================================================== -->
-
-            <div class="card">
-
-                <img
-                    src="CTE%20SEP%201.jpeg"
-                    alt="Consejo Técnico Escolar"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📷
-                </div>
-
-                <h3>
-                    Fotografías CTE SEP
-                </h3>
-
-                <p>
-                    Galería de fotografías de las actividades
-                    del Consejo Técnico Escolar.
-                </p>
-
-                <details>
-
-                    <summary class="btn">
-                        VER FOTOGRAFÍAS
-                    </summary>
-
-                    <div class="fotos">
-
-                        <img
-                            src="CTE%20SEP%201.jpeg"
-                            alt="CTE SEP 1"
-                        >
-
-                        <img
-                            src="CTE%20SEP%202.jpeg"
-                            alt="CTE SEP 2"
-                        >
-
-                        <img
-                            src="CTE%20SEP%203.jpeg"
-                            alt="CTE SEP 3"
-                        >
-
-                        <img
-                            src="CTE%20SEP%204.jpeg"
-                            alt="CTE SEP 4"
-                        >
-
-                    </div>
-
-                </details>
 
             </div>
 
@@ -1614,91 +1331,21 @@ footer p{
         </h2>
 
 
-        <div class="grid">
+        <div class="featured">
 
+            <span class="etiqueta">
+                EXPERIENCIAS
+            </span>
 
-            <div class="card">
+            <h3>
+                👩‍🏫 Experiencias educativas
+            </h3>
 
-                <img
-                    src="LOGO272.jfif"
-                    alt="Estrategias docentes"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    👩‍🏫
-                </div>
-
-                <h3>
-                    Estrategias docentes
-                </h3>
-
-                <p>
-                    Experiencias y estrategias compartidas
-                    por docentes de la Zona Escolar.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        class="btn"
-                        href="#"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        class="btn btn-download"
-                        href="#"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Estrategias para directores"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    👨‍💼
-                </div>
-
-                <h3>
-                    Estrategias para directores
-                </h3>
-
-                <p>
-                    Recursos, experiencias y estrategias
-                    para apoyar la función directiva.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        class="btn"
-                        href="#"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        class="btn btn-download"
-                        href="#"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
-                </div>
-
-            </div>
+            <p>
+                En este apartado se podrán incorporar experiencias
+                educativas y materiales compartidos por las escuelas
+                de la Zona Escolar 272.
+            </p>
 
         </div>
 
@@ -1731,51 +1378,6 @@ footer p{
 
 
         <div class="grid">
-
-
-            <!-- CENTRO DE MAESTROS -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Centro de Maestros"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📚
-                </div>
-
-                <h3>
-                    Centro de Maestros
-                </h3>
-
-                <p>
-                    Recursos y materiales de apoyo para
-                    fortalecer los procesos de lectura
-                    y escritura.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        class="btn"
-                        href="#"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        class="btn btn-download"
-                        href="#"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
-                </div>
-
-            </div>
 
 
             <!-- FICHEROS -->
@@ -1948,142 +1550,6 @@ footer p{
                         </div>
 
                     </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ESTRATEGIAS DE ESCRITURA -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Estrategias de escritura"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    ✍️
-                </div>
-
-                <h3>
-                    Estrategias de escritura
-                </h3>
-
-                <p>
-                    Materiales y actividades para fortalecer
-                    la producción escrita de los alumnos.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        class="btn"
-                        href="#"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        class="btn btn-download"
-                        href="#"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- PROGRAMA ANALÍTICO -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Formulación Del Programa Analítico"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📘
-                </div>
-
-                <h3>
-                    Formulación Del Programa Analítico
-                </h3>
-
-                <p>
-                    Material de apoyo para la formulación
-                    y organización del Programa Analítico.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        href="Formulaci%C3%B3n%20Del%20Programa%20Anal%C3%ADtico.pdf"
-                        target="_blank"
-                        class="btn"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        href="Formulaci%C3%B3n%20Del%20Programa%20Anal%C3%ADtico.pdf"
-                        download
-                        class="btn btn-download"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- ORGANIZACIÓN DE SESIONES -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Organización de las sesiones de trabajo"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📋
-                </div>
-
-                <h3>
-                    Organización de las sesiones de trabajo
-                </h3>
-
-                <p>
-                    Material relacionado con la organización
-                    de las sesiones de trabajo.
-                </p>
-
-                <div class="document-buttons">
-
-                    <a
-                        href="Organizaci%C3%B3n%20de%20las%20sesiones%20de%20trabajo.pdf"
-                        target="_blank"
-                        class="btn"
-                    >
-                        📖 VER
-                    </a>
-
-                    <a
-                        href="Organizaci%C3%B3n%20de%20las%20sesiones%20de%20trabajo.pdf"
-                        download
-                        class="btn btn-download"
-                    >
-                        ⬇️ DESCARGAR
-                    </a>
 
                 </div>
 
@@ -2366,265 +1832,6 @@ footer p{
 
 
 <!-- =====================================================
-     EVALUACIONES
-===================================================== -->
-
-<section
-    id="evaluaciones"
-    class="content-section"
->
-
-    <div class="container">
-
-        <button
-            class="back-home"
-            onclick="mostrarInicio()"
-        >
-            ← Volver al inicio
-        </button>
-
-        <h2>
-            📊 Avance y Evaluaciones
-        </h2>
-
-
-        <div class="grid">
-
-
-            <!-- DIAGNÓSTICO -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Evaluación diagnóstica"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    🔎
-                </div>
-
-                <h3>
-                    Diagnóstico
-                </h3>
-
-                <p>
-                    Instrumentos y materiales para
-                    la evaluación diagnóstica.
-                </p>
-
-
-                <div class="sub-buttons">
-
-
-                    <div class="documento">
-
-                        <strong>
-                            📖 Lectura
-                        </strong>
-
-                        <div class="document-buttons">
-
-                            <a
-                                href="#"
-                                class="btn"
-                            >
-                                📖 VER
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-download"
-                            >
-                                ⬇️ DESCARGAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="documento">
-
-                        <strong>
-                            ✍️ Escritura
-                        </strong>
-
-                        <div class="document-buttons">
-
-                            <a
-                                href="#"
-                                class="btn"
-                            >
-                                📖 VER
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-download"
-                            >
-                                ⬇️ DESCARGAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="documento">
-
-                        <strong>
-                            💻 TIC
-                        </strong>
-
-                        <div class="document-buttons">
-
-                            <a
-                                href="#"
-                                class="btn"
-                            >
-                                📖 VER
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-download"
-                            >
-                                ⬇️ DESCARGAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- NOVIEMBRE -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Evaluación noviembre"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📝
-                </div>
-
-                <h3>
-                    Noviembre
-                </h3>
-
-                <p>
-                    Material correspondiente al seguimiento
-                    y evaluación de noviembre.
-                </p>
-
-
-                <div class="sub-buttons">
-
-                    <div class="documento">
-
-                        <strong>
-                            🔤 Grafías
-                        </strong>
-
-                        <div class="document-buttons">
-
-                            <a
-                                href="#"
-                                class="btn"
-                            >
-                                📖 VER
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-download"
-                            >
-                                ⬇️ DESCARGAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- JUNIO -->
-
-            <div class="card">
-
-                <img
-                    src="LOGO272.jfif"
-                    alt="Evaluación junio"
-                    class="card-image"
-                >
-
-                <div class="icon">
-                    📅
-                </div>
-
-                <h3>
-                    Junio
-                </h3>
-
-                <p>
-                    Material para la evaluación y cierre
-                    del ciclo escolar.
-                </p>
-
-
-                <div class="sub-buttons">
-
-                    <div class="documento">
-
-                        <strong>
-                            📊 Evaluación de cierre
-                        </strong>
-
-                        <div class="document-buttons">
-
-                            <a
-                                href="#"
-                                class="btn"
-                            >
-                                📖 VER
-                            </a>
-
-                            <a
-                                href="#"
-                                class="btn btn-download"
-                            >
-                                ⬇️ DESCARGAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
      PIE DE PÁGINA
 ===================================================== -->
 
@@ -2637,8 +1844,7 @@ footer p{
     </p>
 
     <p>
-        Portal de materiales, estrategias,
-        experiencias y recursos educativos
+        Portal de materiales y recursos educativos
     </p>
 
     <p>
